@@ -55,3 +55,10 @@ process.on('SIGTERM', () => {
 process.on('SIGUSR2', () => {
     console.log('SIGUSR2 received - killing process.');
 });
+
+function tail(filename, n) {
+}
+
+function getFileSize(filename) {
+    var stream = fs.createReadStream(filename, { start: 0, end: 0 });
+}
