@@ -4,7 +4,7 @@
 
 const express = require('express');
 const dotenv = require('dotenv');
-const url = require('url');
+const fs = require('fs');
 
 /**
  * App Configuration
@@ -14,7 +14,9 @@ dotenv.config();
 if (!process.env.PORT) {
     process.exit(1);
 }
-const port = process.env.PORT;
+const port = parseInt(process.env.PORT);
+const LOG_PATH = process.env.LOG_PATH;
+const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE);
 
 const app = express();
 
@@ -36,10 +38,13 @@ app.listen(port, () => {
  *  b. filter results based on basic text/keyword matches
  *  c. specify the last n number of matching entries to retrieve within the log
  */
-app.get('/', (req, res) => {
-    const queryObject = url.parse(req.url, true).query;
-    console.log(JSON.stringify(queryObject));
-    res.send('Received API GET request.');
+app.get('/', async (req, res) => {
+    const filename = req.query.filename || 'messages';
+    const text = req.query.text || 'localhost';
+    const n = req.query.n || 10;
+
+    let path = LOG_PATH + filename;
+    res.send(await tail(path, text, n));
 });
 
 /***
@@ -56,9 +61,76 @@ process.on('SIGUSR2', () => {
     console.log('SIGUSR2 received - killing process.');
 });
 
-function tail(filename, n) {
+/**
+ * 
+ * @param {*} filename 
+ */
+
+// take a name of a file and return the file stats
+async function fileStats(filename) {
+    return fs.statSync(filename, (err, stats) => {
+        if (err) {
+            console.log(err);
+            return err;
+        }
+        return stats.size;
+    });
 }
 
-function getFileSize(filename) {
-    var stream = fs.createReadStream(filename, { start: 0, end: 0 });
+/**
+ * 
+ * @param {*} path Path to the log file to be read
+ * @param {*} text Text to search for in the log file
+ * @param {*} n Number of lines to return from the log file
+ * @returns  Array of lines from the log file
+ */
+async function tail(path = '/var/log/lastlog', text = 'localhost', n = 10) {
+    let results = [];
+    let stats = await fileStats(path);
+
+    if (!stats || stats.size === 0) {
+        return results;
+    }
+
+    let buffer = Buffer.alloc(BUFFER_SIZE);
+
+    let fd = fs.openSync(path, 'r', (err, fd) => {
+        if (err) {
+            console.error(`error: ${err}`);
+            return err;
+        }
+
+        return fd;
+    });
+
+    if (!fd) {
+        console.error('Error opening file');
+        return results;
+    }
+
+
+    let position = stats.size - buffer.length;
+
+    while (position > 0 && results.length < n) {
+
+        let bytesRead = fs.readSync(fd, buffer, 0, buffer.length, position);
+        let data = buffer.toString('utf8', 0, bytesRead);
+
+        let lines = data.slice(data.indexOf('\n') + 1).split('\n');
+
+        for (let i = lines.length - 1; i >= 0; i--) {
+            let line = lines[i];
+            if (line.includes(text)) {
+                results.push(line);
+            }
+            if (results.length === n) {
+                break;
+            }
+        }
+
+        position -= buffer.length;
+    }
+
+    return results;
+
 }

@@ -6,7 +6,7 @@ The Cribl-API service provides on-demand monitoring of various unix-based server
 Provide design documentation.
 
 The crux of the problem, IMO, is to read the stream using small block sizes.
-By default, I use 64KiB.
+By default, I use 4KiB.
 Files are read block by block from the end.
 That way, we save a TON of time, skipping blocks at the top.
 
