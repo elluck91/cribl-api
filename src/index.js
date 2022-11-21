@@ -39,6 +39,7 @@ app.listen(port, () => {
  *  c. specify the last n number of matching entries to retrieve within the log
  */
 app.get('/', async (req, res) => {
+    console.log(`GET /`, req.query);
     const filename = req.query.filename || 'messages';
     const text = req.query.text || 'localhost';
     const n = req.query.n || 10;
@@ -63,17 +64,17 @@ process.on('SIGUSR2', () => {
 
 /**
  * 
- * @param {*} filename 
+ * @param {*} filename Name of the file to be read from the /var/log directory
+ * 
+ * @returns Stats for the file in the /var/log directory
  */
-
-// take a name of a file and return the file stats
 async function fileStats(filename) {
     return fs.statSync(filename, (err, stats) => {
         if (err) {
             console.log(err);
             return err;
         }
-        return stats.size;
+        return stats;
     });
 }
 
@@ -84,36 +85,42 @@ async function fileStats(filename) {
  * @param {*} n Number of lines to return from the log file
  * @returns  Array of lines from the log file
  */
-async function tail(path = '/var/log/lastlog', text = 'localhost', n = 10) {
+async function tail(path, text, n) {
     let results = [];
-    let stats = await fileStats(path);
+    let stats;
 
-    if (!stats || stats.size === 0) {
+    try {
+        stats = await fileStats(path);
+        if (!stats || stats.size === 0) {
+            return results;
+        }
+    } catch (err) {
+        console.log(err);
         return results;
     }
 
     let buffer = Buffer.alloc(BUFFER_SIZE);
+    let fd;
 
-    let fd = fs.openSync(path, 'r', (err, fd) => {
-        if (err) {
-            console.error(`error: ${err}`);
-            return err;
-        }
-
-        return fd;
-    });
-
-    if (!fd) {
-        console.error('Error opening file');
+    try {
+        fd = fs.openSync(path, 'r');
+    } catch (err) {
+        console.log(err);
         return results;
     }
 
-
     let position = stats.size - buffer.length;
 
-    while (position > 0 && results.length < n) {
+    while (position >= 0 && results.length < n) {
+        let bytesRead;
 
-        let bytesRead = fs.readSync(fd, buffer, 0, buffer.length, position);
+        try {
+            bytesRead = fs.readSync(fd, buffer, 0, buffer.length, position);
+        } catch (err) {
+            console.log(err);
+            return results;
+        }
+
         let data = buffer.toString('utf8', 0, bytesRead);
 
         let lines = data.slice(data.indexOf('\n') + 1).split('\n');
@@ -131,6 +138,12 @@ async function tail(path = '/var/log/lastlog', text = 'localhost', n = 10) {
         position -= buffer.length;
     }
 
-    return results;
+    try {
+        fs.closeSync(fd);
+    } catch (err) {
+        console.log(err);
+        return results;
+    }
 
+    return results;
 }
