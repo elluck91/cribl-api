@@ -54,6 +54,7 @@ app.get('/lines', async (req, res) => {
     }
 
     try {
+        // Get the last n lines from the log file
         const results = await tail(`${LOG_PATH}/${filename}`, filter, limit || 10);
         res.status(200).send(results);
     } catch (err) {
@@ -136,15 +137,12 @@ async function tail(path, text, n) {
 
         // Add the lines to the list of lines
         lines = lines.concat(linesInData.reverse());
-
-        if (text) {
-            lines = lines.filter(line => line.includes(text));
-        } else {
-            lines = lines.slice(0, n);
-        }
+        lines = text ? lines.filter(line => line.includes(text)) : lines;
+        lines = lines.slice(0, n);
     }
 
     fs.closeSync(fd);
+    console.log(`Returning ${lines.length} lines from ${path}`);
     return lines;
 }
 
