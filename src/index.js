@@ -30,8 +30,8 @@ app.listen(port, () => {
 /**
  * GET lines
  * 
- * The endpoint returns a specified numer of lines from a givel log file.
- * Returned linest are order by event's date/time (newest first).
+ * The endpoint returns a specified numer of lines from a given log file.
+ * Returned lines are order by event's date/time (newest first).
  * 
  * Supported query parameters:
  *  a. filename (within /var/log)
@@ -130,7 +130,7 @@ async function tail(path, text, n) {
             if (line.includes(text)) {
                 results.push(line);
             }
-            if (results.length === n) {
+            if (results.length === n) {// BROKEN, n is a string, not a number
                 break;
             }
         }

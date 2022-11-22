@@ -1,0 +1,3 @@
+- add another text file such as "messages_2" just to allow testing the "filename" parameter
+- consider returning error messages in response. However this can be case by case as I've seen some arguments that this can reveal too much about the server logic and can be a security risk. I personally appreciate an error response.
+- see comment: // BROKEN, n is a string, not a number
