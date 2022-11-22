@@ -16,7 +16,6 @@ if (!process.env.PORT) {
 }
 const port = parseInt(process.env.PORT);
 const LOG_PATH = process.env.LOG_PATH;
-const BUFFER_SIZE = parseInt(process.env.BUFFER_SIZE);
 
 const app = express();
 
@@ -30,22 +29,37 @@ app.listen(port, () => {
 /**
  * GET lines
  * 
- * The endpoint returns a specified numer of lines from a givel log file.
- * Returned linest are order by event's date/time (newest first).
+ * The endpoint returns a specified numer of lines from a given log file.
+ * Returned lines are ordered by event's date/time (newest first).
  * 
  * Supported query parameters:
  *  a. filename (within /var/log)
  *  b. filter results based on basic text/keyword matches
  *  c. specify the last n number of matching entries to retrieve within the log
  */
-app.get('/', async (req, res) => {
-    console.log(`GET /`, req.query);
-    const filename = req.query.filename || 'messages';
-    const text = req.query.text || 'localhost';
-    const n = req.query.n || 10;
+app.get('/lines', async (req, res) => {
+    const filename = req.query.filename;
+    const filter = req.query.filter;
+    const limit = req.query.limit;
 
-    let path = LOG_PATH + filename;
-    res.send(await tail(path, text, n));
+    if (!filename) {
+        res.status(400).send('Missing filename');
+        return;
+    } else if (!fs.existsSync(`${LOG_PATH}/${filename}`)) {
+        res.status(400).send('Invalid filename');
+        return;
+    } else if (limit && isNaN(limit)) {
+        res.status(400).send('Invalid limit');
+        return;
+    }
+
+    try {
+        const results = await tail(`${LOG_PATH}/${filename}`, filter, limit || 10);
+        res.status(200).send(results);
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+
 });
 
 /***
@@ -86,64 +100,51 @@ async function fileStats(filename) {
  * @returns  Array of lines from the log file
  */
 async function tail(path, text, n) {
-    let results = [];
-    let stats;
+    const stats = await fileStats(path);
+    const fileSize = stats.size;
+    const buffer = Buffer.alloc(stats.blksize);
+    const fd = fs.openSync(path, 'r');
 
-    try {
-        stats = await fileStats(path);
-        if (!stats || stats.size === 0) {
-            return results;
-        }
-    } catch (err) {
-        console.log(err);
-        return results;
-    }
+    let lines = [];
+    let pos = fileSize;
 
-    let buffer = Buffer.alloc(BUFFER_SIZE);
-    let fd;
+    while (lines.length < n && pos > 0) {
+        let bytesToRead = Math.min(stats.blksize, pos);
+        pos -= bytesToRead;
 
-    try {
-        fd = fs.openSync(path, 'r');
-    } catch (err) {
-        console.log(err);
-        return results;
-    }
-
-    let position = stats.size - buffer.length;
-
-    while (position >= 0 && results.length < n) {
-        let bytesRead;
-
-        try {
-            bytesRead = fs.readSync(fd, buffer, 0, buffer.length, position);
-        } catch (err) {
-            console.log(err);
-            return results;
-        }
-
+        let bytesRead = fs.readSync(fd, buffer, 0, bytesToRead, pos);
         let data = buffer.toString('utf8', 0, bytesRead);
 
-        let lines = data.slice(data.indexOf('\n') + 1).split('\n');
-
-        for (let i = lines.length - 1; i >= 0; i--) {
-            let line = lines[i];
-            if (line.includes(text)) {
-                results.push(line);
-            }
-            if (results.length === n) {
-                break;
-            }
+        // If we're not at the beginning of the file, we need to ignore the last line
+        // because it's probably not a complete line
+        if (pos > 0) {
+            data = data.substring(data.indexOf('\n') + 1);
+        } else {
+            data = data.substring(0, data.lastIndexOf('\n'));
         }
 
-        position -= buffer.length;
+        let linesInData = data.split('\n');
+
+        // If we're not at the beginning of the file, we need to add the last line
+        // from the previous read to the first line of this read
+        if (pos > 0) {
+            linesInData[0] = lines[lines.length - 1] + linesInData[0];
+            lines.pop();
+        } else {
+            linesInData.pop();
+        }
+
+        // Add the lines to the list of lines
+        lines = lines.concat(linesInData.reverse());
+
+        if (text) {
+            lines = lines.filter(line => line.includes(text));
+        } else {
+            lines = lines.slice(0, n);
+        }
     }
 
-    try {
-        fs.closeSync(fd);
-    } catch (err) {
-        console.log(err);
-        return results;
-    }
-
-    return results;
+    fs.closeSync(fd);
+    return lines;
 }
+
