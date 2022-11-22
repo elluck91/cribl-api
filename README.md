@@ -16,4 +16,4 @@ run docker image: docker run -p 3000:3000 cribl-api
 
 # Testing
 
-Provide testing instructions.
+curl localhost:3000
