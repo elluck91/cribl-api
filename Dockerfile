@@ -1,7 +1,7 @@
 FROM node:18
 
 ENV PORT=3000
-ENV LOG_PATH=/usr/src/app/test/
+ENV LOG_PATH=/usr/src/app/test
 EXPOSE $PORT
 
 WORKDIR /usr/src/app
