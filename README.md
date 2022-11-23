@@ -10,7 +10,7 @@ It accepts 3 query parameters:
 ```
 filename: {String} Text representing the filename (or relative path) to a log file in /var/log
 filter: {String} Text to filter the log file(s) by
-limit: {number} number of matching entries to retrieve within the log
+limit: {number} number of matching entries to retrieve within the log (default 10)
 ```
 
 The API checks for the existence of the log file, and performes what's essentially known as 'tail'.
@@ -34,15 +34,15 @@ The source code is split into client/server code bases.
 
 ## Client:
 
-`build docker image: docker build -t cribl-client .`
+build docker image: `docker build -t cribl-client ./client`
 
-`run docker image: docker run -p 3001:3001 cribl-client`
+run docker image: `docker run -p 3001:3001 cribl-client`
 
 ## Server:
 
-`build docker image: docker build -t cribl-api .`
+build docker image: `docker build -t cribl-api ./server`
 
-`run docker image: docker run -p 3002:3002 cribl-api`
+run docker image: `docker run -p 3002:3002 cribl-api`
 
 # Testing
 
@@ -58,6 +58,28 @@ You may curl the api using query parameters.
 Example:
 
 `curl localhost:3002/lines?filename={filename}&filter={filter}&limit={limit}`
+
+### Tested cases
+
+```
+Valid:
+
+http://localhost:3002/lines?filename=dpkg.log&filter=libmagick&limit=5
+http://localhost:3002/lines?filename=dpkg.log&filter=libmagick&limit=50
+http://localhost:3002/lines?filename=dpkg.log&filter=libmagick
+http://localhost:3002/lines?filename=dpkg.log&limit=50
+http://localhost:3002/lines?filename=apt/term.log&filter=triggers&limit=5
+http://localhost:3002/lines?filename=apt/term.log&filter=libmagick&limit=15
+
+```
+
+```
+Invalid:
+
+http://localhost:3002/lines?filename=syslog&filter=libmagick&limit=5 (invalid filename)
+http://localhost:3002/lines?filename=dpkg.log&filter=libmagick&limit=5s0 (invalid limit)
+
+```
 
 ## Script
 There is a test script in `test` directory. The scripts tests a few scenarios:
