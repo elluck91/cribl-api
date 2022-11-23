@@ -1,0 +1,17 @@
+{
+  "name": "cribl",
+  "version": "1.0.0",
+  "description": "Utility API Service for unix /var/log monitoring",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node src/index.js"
+  },
+  "author": "ljuraszek",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "url": "^0.11.0"
+  }
+}
