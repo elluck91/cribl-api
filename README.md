@@ -70,17 +70,13 @@ http://localhost:3002/lines?filename=dpkg.log&filter=libmagick
 http://localhost:3002/lines?filename=dpkg.log&limit=50
 http://localhost:3002/lines?filename=apt/term.log&filter=triggers&limit=5
 http://localhost:3002/lines?filename=apt/term.log&filter=libmagick&limit=15
-
 ```
-
 ```
 Invalid:
 
 http://localhost:3002/lines?filename=syslog&filter=libmagick&limit=5 (invalid filename)
 http://localhost:3002/lines?filename=dpkg.log&filter=libmagick&limit=5s0 (invalid limit)
-
 ```
-
 ## Script
 There is a test script in `test` directory. The scripts tests a few scenarios:
 - Wrong input types/values
