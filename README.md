@@ -3,17 +3,69 @@ The Cribl-API service provides on-demand monitoring of various unix-based server
 
 # Design
 
-The crux of the problem, IMO, is to read the stream using small block sizes.
-By default, I use 4KiB.
-Files are read block by block from the end.
-That way, we save a TON of time, skipping blocks at the top.
+The REST API exposes /lines endpoint.
+
+It accepts 3 query parameters:
+
+```
+filename: {String} Text representing the filename (or relative path) to a log file in /var/log
+filter: {String} Text to filter the log file(s) by
+limit: {number} number of matching entries to retrieve within the log
+```
+
+The API checks for the existence of the log file, and performes what's essentially known as 'tail'.
+
+We expect the results to be ordered chronologically by event datetime, with newest events returned at the top.
+
+Efficient solution doesn't read the (potentially) very large log file into memory. Instead, we perform byte reads using offset, and a limited buffer.
+
+The buffer size is equal to the size of the file block, or the remaining bytes to read.
+
+## Extra challenge
+**In this case, it's important to determine how the nested results should be handled**
+
+`Primary` - we could set up an ENV variable to denominate primary server. Such server keeps track of `secondary` servers, and aggregates the `secondary's` server's logs.
+
+`Secondary` - secondary server uses ENV variable to denominate its nature. Such server would perform as usual - tail on logs.
 
 # Usage
 
-build docker image: docker build -t cribl-api .
+The source code is split into client/server code bases.
 
-run docker image: docker run -p 3000:3000 cribl-api
+## Client:
+
+`build docker image: docker build -t cribl-client .`
+
+`run docker image: docker run -p 3001:3001 cribl-client`
+
+## Server:
+
+`build docker image: docker build -t cribl-api .`
+
+`run docker image: docker run -p 3002:3002 cribl-api`
 
 # Testing
 
-curl localhost:3000
+There are at least 3 ways to test the REST API:
+
+## UI
+With the client, and server docker containers running, access the localhost at port 3001 (default).
+Enter `filename`, `filter`, and `limit` in the form input fields, and hit `Fetch Logs`.
+The results will be displayed in the scrollable `div`.
+
+## CURL
+You may curl the api using query parameters.
+Example:
+
+`curl localhost:3002/lines?filename={filename}&filter={filter}&limit={limit}`
+
+## Script
+There is a test script in `test` directory. The scripts tests a few scenarios:
+- Wrong input types/values
+- Missing query parameters
+- Multiple filenames, filters, limits
+
+Execute it by running:
+`node test.js`
+
+
