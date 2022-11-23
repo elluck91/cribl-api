@@ -1,7 +1,6 @@
 /**
  * App Dependencies
  */
-
 const express = require('express');
 const dotenv = require('dotenv');
 const fs = require('fs');
@@ -14,6 +13,7 @@ dotenv.config();
 if (!process.env.PORT) {
     process.exit(1);
 }
+
 const port = parseInt(process.env.PORT);
 const LOG_PATH = process.env.LOG_PATH;
 
@@ -33,9 +33,9 @@ app.listen(port, () => {
  * Returned lines are ordered by event's date/time (newest first).
  * 
  * Supported query parameters:
- *  a. filename (within /var/log)
- *  b. filter results based on basic text/keyword matches
- *  c. specify the last n number of matching entries to retrieve within the log
+ *  @param { String } filename Name of the log file to be read from the /var/log directory or local test/ directory
+ *  @param { String } filter Text to filter the log file by
+ *  @param { number } limit Number of lines to return from the log file
  */
 app.get('/lines', async (req, res) => {
     const filename = req.query.filename;
@@ -60,13 +60,11 @@ app.get('/lines', async (req, res) => {
     } catch (err) {
         res.status(500).send(err.message);
     }
-
 });
 
 /***
  * App Termination
  */
-
 process.on('SIGTERM', () => {
     console.log('Termination Signal received - SIGTERM. Preparing application for shot down.');
     process.exit();
@@ -79,7 +77,7 @@ process.on('SIGUSR2', () => {
 
 /**
  * 
- * @param {*} filename Name of the file to be read from the /var/log directory
+ * @param { String } filename Name of the file to be read from the /var/log directory
  * 
  * @returns Stats for the file in the /var/log directory
  */
@@ -98,6 +96,7 @@ async function fileStats(filename) {
  * @param {*} path Path to the log file to be read
  * @param {*} text Text to search for in the log file
  * @param {*} n Number of lines to return from the log file
+ * 
  * @returns  Array of lines from the log file
  */
 async function tail(path, text, n) {

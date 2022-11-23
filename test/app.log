@@ -1,13 +1,13 @@
-Nov 21 11:04:21 localhost kernel: veth3ab5456: renamed from eth0
-Nov 21 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2340] manager: (veth3ab5456): new Veth device (/org/freedesktop/NetworkManager/Devices/67)
-Nov 21 11:04:21 localhost avahi-daemon[943]: Interface vethe1caac9.IPv6 no longer relevant for mDNS.
-Nov 21 11:04:21 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethe1caac9.IPv6 with address fe80::24df:afff:fe58:5fc3.
-Nov 21 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
-Nov 21 11:04:21 localhost audit: ANOM_PROMISCUOUS dev=vethe1caac9 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
-Nov 21 11:04:21 localhost kernel: device vethe1caac9 left promiscuous mode
-Nov 21 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
-Nov 21 11:04:21 localhost avahi-daemon[943]: Withdrawing address record for fe80::24df:afff:fe58:5fc3 on vethe1caac9.
-Nov 21 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2494] device (vethe1caac9): released from master device docker0
+Nov 20 11:04:21 localhost kernel: veth3ab5456: renamed from eth0
+Nov 20 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2340] manager: (veth3ab5456): new Veth device (/org/freedesktop/NetworkManager/Devices/67)
+Nov 20 11:04:21 localhost avahi-daemon[943]: Interface vethe1caac9.IPv6 no longer relevant for mDNS.
+Nov 20 11:04:21 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethe1caac9.IPv6 with address fe80::24df:afff:fe58:5fc3.
+Nov 20 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
+Nov 20 11:04:21 localhost audit: ANOM_PROMISCUOUS dev=vethe1caac9 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 20 11:04:21 localhost kernel: device vethe1caac9 left promiscuous mode
+Nov 20 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
+Nov 20 11:04:21 localhost avahi-daemon[943]: Withdrawing address record for fe80::24df:afff:fe58:5fc3 on vethe1caac9.
+Nov 20 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2494] device (vethe1caac9): released from master device docker0
 Nov 21 11:04:21 localhost systemd[1]: run-docker-netns-15f7c336f682.mount: Deactivated successfully.
 Nov 21 11:04:21 localhost systemd[1]: var-lib-docker-overlay2-1cfbd9b442293673c183202fdda3df98178c304b6358323291c15de60bd6968f-merged.mount: Deactivated successfully.
 Nov 21 11:04:21 localhost systemd[1]: var-lib-docker-overlay2-1cfbd9b442293673c183202fdda3df98178c304b6358323291c15de60bd6968f-merged.mount: Deactivated successfully.

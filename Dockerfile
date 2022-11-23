@@ -1,7 +1,7 @@
 FROM node:18
 
 ENV PORT=3000
-ENV LOG_PATH=/usr/src/app/test
+ENV LOG_PATH=/var/log
 EXPOSE $PORT
 
 WORKDIR /usr/src/app
@@ -11,7 +11,7 @@ COPY test /usr/src/app/test
 COPY .env package-lock.json package.json /usr/src/app/
 
 RUN chmod -R a+r /var/log
-RUN chmod -R 0777 /usr/src/app
+RUN chmod -R 0777 /usr/src/app/test
 
 RUN npm install
 
