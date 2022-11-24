@@ -4,6 +4,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const fs = require('fs');
+const { isValidFilename, isValidFilter, isValidLimit } = require('./validator');
 
 /**
  * App Configuration
@@ -37,34 +38,47 @@ app.listen(port, () => {
  *  @param { String } filter Text to filter the log file by
  *  @param { number } limit Number of lines to return from the log file
  */
-app.get('/lines', async (req, res) => {
+app.get('/lines', (req, res) => {
     const filename = req.query.filename;
     const filter = req.query.filter;
     const limit = req.query.limit;
 
-    if (!filename) {
-        res.status(400).send('Missing filename');
-        return;
-    } else if (!fs.existsSync(`${LOG_PATH}/${filename}`)) {
-        res.status(400).send('Invalid filename');
-        return;
-    } else if (limit && isNaN(limit)) {
-        res.status(400).send('Invalid limit');
-        return;
-    }
-
     try {
-        // Get the last n lines from the log file
-        const results = await tail(`${LOG_PATH}/${filename}`, filter, limit || 10);
-        res.status(200).send(results);
+        // Validate the query parameters
+        isValidFilename(filename).then(() => {
+            isValidFilter(filter).then(() => {
+                isValidLimit(limit).then(() => {
+                    // Read the log file
+                    const filePath = `${LOG_PATH}/${filename}`;
+                    tail(filePath, filter, limit)
+                        .then(lines => {
+                            res.send(lines);
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            res.status(400).json({ error: err.message });
+                        });
+                }).catch(err => {
+                    console.log(err);
+                    res.status(400).json({ error: err.message });
+                });
+            }).catch(err => {
+                console.log(err);
+                res.status(400).json({ error: err.message });
+            });
+        }).catch(err => {
+            console.log(err);
+            res.status(400).json({ error: err.message });
+        });
     } catch (err) {
-        res.status(500).send(err.message);
+
+        console.log(err);
+        res.status(500).json({ error: err.message });
     }
 });
 
-/***
- * App Termination
- */
+/* App Termination
+*/
 process.on('SIGTERM', () => {
     console.log('Termination Signal received - SIGTERM. Preparing application for shot down.');
     process.exit();
@@ -75,19 +89,17 @@ process.on('SIGUSR2', () => {
     console.log('SIGUSR2 received - killing process.');
 });
 
-/**
- * 
- * @param { String } filename Name of the file to be read from the /var/log directory
- * 
- * @returns Stats for the file in the /var/log directory
- */
-async function fileStats(filename) {
-    return fs.statSync(filename, (err, stats) => {
-        if (err) {
-            console.log(err);
-            return err;
-        }
-        return stats;
+
+function fileStats(filename) {
+    console.log(`Reading file stats for ${filename}`);
+    return new Promise((resolve, reject) => {
+        fs.stat(filename, (err, stats) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(stats);
+            }
+        });
     });
 }
 
@@ -145,3 +157,4 @@ async function tail(path, text, n) {
     return lines;
 }
 
+module.exports = app;
