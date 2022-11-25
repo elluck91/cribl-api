@@ -14,7 +14,6 @@ function isValidFilename(filename) {
             reject('Invalid filename');
         }
 
-
         resolve();
     });
 }
