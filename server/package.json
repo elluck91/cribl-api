@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "npm run test",
-    "start": "node src/index.js"
+    "start": "node src/primary.js",
+    "watch": "node src/secondary.js"
   },
   "author": "ljuraszek",
   "license": "ISC",

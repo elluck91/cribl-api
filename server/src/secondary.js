@@ -1,30 +1,40 @@
-/**
- * App Dependencies
- */
+// Path: server/src/watch.js
 const express = require('express');
-const dotenv = require('dotenv');
 const fs = require('fs');
+const http = require('http');
 const { isValidFilename, isValidFilter, isValidLimit } = require('./validator');
+require('dotenv').config();
 
-/**
- * App Configuration
- */
-dotenv.config();
+const UID = 3003;
+const LOG_PATH = process.env.LOG_PATH;
 
-if (!process.env.PORT) {
+const app = new express();
+
+if (!process.env.SECONDARY_PORT) {
+    console.error('SECONDARY_PORT is not set.');
     process.exit(1);
 }
 
-const port = parseInt(process.env.PORT);
-const LOG_PATH = process.env.LOG_PATH;
+app.listen(process.env.SECONDARY_PORT, () => {
+    console.log(`Listening on port ${process.env.SECONDARY_PORT}.`);
 
-const app = express();
-
-/**
- * App Start
- */
-app.listen(port, () => {
-    console.log(`Running crible API at http://localhost:${port}`);
+    // send POST request to localhost:3002, and send my unique id
+    http.request({
+        host: 'localhost',
+        port: process.env.PRIMARY_PORT,
+        path: '/subscribe',
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ id: UID })
+    }, (res) => {
+        res.on('data', (data) => {
+            console.log(data.toString());
+        });
+    }, (err) => {
+        console.error(err);
+    }).end('watcher');
 });
 
 /**
@@ -38,60 +48,28 @@ app.listen(port, () => {
  *  @param { String } filter Text to filter the log file by
  *  @param { number } limit Number of lines to return from the log file
  */
-app.get('/lines', (req, res) => {
+app.get('/lines', async (req, res) => {
     const filename = req.query.filename;
     const filter = req.query.filter;
     const limit = req.query.limit;
 
-    try {
-        // Validate the query parameters
-        isValidFilename(filename).then(() => {
-            isValidFilter(filter).then(() => {
-                isValidLimit(limit).then(() => {
-                    // Read the log file
-                    const filePath = `${LOG_PATH}/${filename}`;
-                    tail(filePath, filter, limit)
-                        .then(lines => {
-                            res.send(lines);
-                        })
-                        .catch(err => {
-                            console.log(err);
-                            res.status(400).json({ error: err.message });
-                        });
-                }).catch(err => {
-                    console.log(err);
-                    res.status(400).json({ error: err.message });
-                });
-            }).catch(err => {
-                console.log(err);
-                res.status(400).json({ error: err.message });
-            });
-        }).catch(err => {
-            console.log(err);
-            res.status(400).json({ error: err.message });
-        });
-    } catch (err) {
+    const validators = await Promise.all([isValidFilename(filename), isValidFilter(filter), isValidLimit(limit)]);
 
-        console.log(err);
-        res.status(500).json({ error: err.message });
+    if (validators.includes(false)) {
+        res.status(400).send('Invalid query parameters.');
+        return;
+    } else {
+        try {
+            const filePath = `${LOG_PATH}/${filename}`;
+            const lines = await getLines(filePath, filter, limit);
+            res.send(lines);
+        } catch (err) {
+            res.status(500).send(err);
+        }
     }
 });
 
-/* App Termination
-*/
-process.on('SIGTERM', () => {
-    console.log('Termination Signal received - SIGTERM. Preparing application for shot down.');
-    process.exit();
-})
-
-// Linux 'kill' command was sent
-process.on('SIGUSR2', () => {
-    console.log('SIGUSR2 received - killing process.');
-});
-
-
 function fileStats(filename) {
-    console.log(`Reading file stats for ${filename}`);
     return new Promise((resolve, reject) => {
         fs.stat(filename, (err, stats) => {
             if (err) {
@@ -111,7 +89,7 @@ function fileStats(filename) {
  * 
  * @returns  Array of lines from the log file
  */
-async function tail(path, text, n) {
+async function getLines(path, text, n) {
     const stats = await fileStats(path);
     const fileSize = stats.size;
     const buffer = Buffer.alloc(stats.blksize);
@@ -152,9 +130,15 @@ async function tail(path, text, n) {
         lines = lines.slice(0, n);
     }
 
-    fs.closeSync(fd);
-    console.log(`Returning ${lines.length} lines from ${path}`);
+    await new Promise((resolve, reject) => {
+        fs.close(fd, (err) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve();
+            }
+        });
+    });
+
     return lines;
 }
-
-module.exports = app;
