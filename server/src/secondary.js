@@ -5,10 +5,11 @@ const http = require('http');
 const { isValidFilename, isValidFilter, isValidLimit } = require('./validator');
 require('dotenv').config();
 
-const UID = 3003;
+const UID = process.env.SECONDARY_PORT;
 const LOG_PATH = process.env.LOG_PATH;
 
 const app = new express();
+app.use(express.json());
 
 if (!process.env.SECONDARY_PORT) {
     console.error('SECONDARY_PORT is not set.');
@@ -17,20 +18,16 @@ if (!process.env.SECONDARY_PORT) {
 
 app.listen(process.env.SECONDARY_PORT, () => {
     console.log(`Listening on port ${process.env.SECONDARY_PORT}.`);
-
+    console.log(`UID: ${UID}`);
     // send POST request to localhost:3002, and send my unique id
     http.request({
         host: 'localhost',
         port: process.env.PRIMARY_PORT,
-        path: '/subscribe',
+        path: `/subscribe/${UID}`,
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ id: UID })
     }, (res) => {
         res.on('data', (data) => {
-            console.log(data.toString());
+            console.log(`This is the data: ${data.toString()}`);
         });
     }, (err) => {
         console.error(err);
@@ -44,16 +41,21 @@ app.listen(process.env.SECONDARY_PORT, () => {
  * Returned lines are ordered by event's date/time (newest first).
  * 
  * Supported query parameters:
- *  @param { String } filename Name of the log file to be read from the /var/log directory or local test/ directory
- *  @param { String } filter Text to filter the log file by
- *  @param { number } limit Number of lines to return from the log file
+ *  @param { String } filename  Name of the log file to be read from
+ *                              the /var/log directory or local test/ directory
+ *  @param { String } filter    Text to filter the log file by
+ *  @param { number } limit     Number of lines to return from the log file
  */
 app.get('/lines', async (req, res) => {
+
+    // log request
+    console.log(`GET /lines?filename=${req.query.filename}&filter=${req.query.filter}&limit=${req.query.limit}`);
     const filename = req.query.filename;
     const filter = req.query.filter;
-    const limit = req.query.limit;
+    const limit = parseInt(req.query.limit);
 
-    const validators = await Promise.all([isValidFilename(filename), isValidFilter(filter), isValidLimit(limit)]);
+    const validators = await Promise.all([isValidFilename(filename),
+        isValidFilter(filter), isValidLimit(limit)]);
 
     if (validators.includes(false)) {
         res.status(400).send('Invalid query parameters.');

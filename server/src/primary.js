@@ -1,6 +1,7 @@
 /**
  * App Dependencies
  */
+const http = require('http');
 const express = require('express');
 require('dotenv').config();
 
@@ -11,6 +12,8 @@ if (!process.env.PRIMARY_PORT) {
 
 const port = parseInt(process.env.PRIMARY_PORT);
 const app = express();
+app.use(express.json());
+
 
 const subscriptions = [];
 
@@ -22,15 +25,17 @@ app.listen(port, () => {
 });
 
 // Accept POST request at /subscribe endpoint and send back a response
-app.post('/subscribe', (req, res) => {
-// identify where the request is coming from
-    const id = req.body.id;
-    console.log(`Received subscription request from ${id}.`);
+app.post('/subscribe/:id', (req, res) => {
+    // identify where the request is coming from
+    const uid = req.params.id;
+    addSubscription(uid);
 
-    addSubscription(id);
-
-    // send back a response
-    res.send(`Subscribed to ${id}.`);
+    try {
+        res.send('Subscription successful.');
+    } catch (err) {
+        console.error(err);
+        res.statusCode(500).send('Subscription failed.');
+    }
 });
 
 // Accept GET request at /lines endpoint
@@ -55,29 +60,25 @@ app.get('/lines', async (req, res) => {
 })
 
 function getSecondaryLogs(uid, filename, filter, limit) {
-    return new Promise((resolve, reject) => {
-        http.request({
-            host: 'localhost',
-            port: uid,
-            path: '/subscribe',
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                id: UID,
-                filename,
-                filter, limit
-            })
-        }, (res) => {
-            res.on('data', (data) => {
-                resolve(data.toString());
-            });
-        }), (err) => {
-            reject(err);
-        }
-    });
-    
+    try {
+        return new Promise((resolve, reject) => {
+            http.request({
+                host: 'localhost',
+                port: uid,
+                path: `/lines?filename=${filename}&filter=${filter}&limit=${limit}`,
+                method: 'GET',
+            }, (res) => {
+                res.on('data', (data) => {
+                    resolve(data.toString());
+                });
+            }, (err) => {
+                reject(err);
+            }).end();
+        })
+    } catch (err) {
+        console.error(err);
+    }
+
 }
 
 // Save new subscription in memory

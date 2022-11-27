@@ -1,8 +1,10 @@
-const MIN_LIMIT = 1;
-const MAX_LIMIT = 1000;
+require('dotenv').config();
 
-const MIN_FILTER_LENGTH = 1;
-const MAX_FILTER_LENGTH = 100;
+const MIN_LIMIT = process.env.MIN_LIMIT;
+const MAX_LIMIT = process.env.MAX_LIMIT;
+
+const MIN_FILTER_LENGTH = process.env.MIN_FILTER_LENGTH;
+const MAX_FILTER_LENGTH = process.env.MAX_FILTER_LENGTH;
 
 const LOG_PATH = process.env.LOG_PATH;
 
