@@ -1,7 +1,7 @@
 // Path: server/src/test/index.test.js
 const request = require('supertest');
 const expect = require('chai').expect;
-const app = require('../server/src/index');
+const app = require('../src/secondary');
 
 // Test GET /lines endpoint
 describe('GET /lines', () => {

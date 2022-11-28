@@ -158,3 +158,5 @@ async function getLines(path, text, n) {
 
     return lines;
 }
+
+module.exports = app;
