@@ -139,10 +139,5 @@ async function getLines(path, text, n) {
         });
     });
 
-    lines.forEach((line, index) => {
-        lines[index] = line.replace(/\r/, '');
-        console.log(line);
-    });
-    
     return lines;
 }
