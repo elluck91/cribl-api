@@ -12,7 +12,7 @@ const LOG_PATH = process.env.LOG_PATH;
 function isValidFilename(filename) {
     return new Promise((resolve, reject) => {
         console.log(`${LOG_PATH}/${filename}`);
-        if (filename === null || filename === undefined || filename === '') {
+        if (filename === null || filename === undefined || filename === '' || filename.includes('../')) {
             reject('Invalid filename');
         }
 

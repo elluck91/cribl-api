@@ -5,7 +5,7 @@ const http = require('http');
 const { isValidFilename, isValidFilter, isValidLimit } = require('./validator');
 require('dotenv').config();
 
-const UID = process.env.SECONDARY_PORT;
+const UID = parseInt(process.env.SECONDARY_PORT);
 const LOG_PATH = process.env.LOG_PATH;
 
 const app = new express();

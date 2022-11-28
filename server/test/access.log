@@ -1,0 +1,1000 @@
+Nov 20 11:04:21 localhost kernel: veth3ab5456: renamed from eth0
+Nov 20 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2340] manager: (veth3ab5456): new Veth device (/org/freedesktop/NetworkManager/Devices/67)
+Nov 20 11:04:21 localhost avahi-daemon[943]: Interface vethe1caac9.IPv6 no longer relevant for mDNS.
+Nov 20 11:04:21 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethe1caac9.IPv6 with address fe80::24df:afff:fe58:5fc3.
+Nov 20 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
+Nov 20 11:04:21 localhost audit: ANOM_PROMISCUOUS dev=vethe1caac9 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 20 11:04:21 localhost kernel: device vethe1caac9 left promiscuous mode
+Nov 20 11:04:21 localhost kernel: docker0: port 1(vethe1caac9) entered disabled state
+Nov 20 11:04:21 localhost avahi-daemon[943]: Withdrawing address record for fe80::24df:afff:fe58:5fc3 on vethe1caac9.
+Nov 20 11:04:21 localhost NetworkManager[1112]: <info>  [1669057461.2494] device (vethe1caac9): released from master device docker0
+Nov 21 11:04:21 localhost systemd[1]: run-docker-netns-15f7c336f682.mount: Deactivated successfully.
+Nov 21 11:04:21 localhost systemd[1]: var-lib-docker-overlay2-1cfbd9b442293673c183202fdda3df98178c304b6358323291c15de60bd6968f-merged.mount: Deactivated successfully.
+Nov 21 11:04:21 localhost systemd[1]: var-lib-docker-overlay2-1cfbd9b442293673c183202fdda3df98178c304b6358323291c15de60bd6968f-merged.mount: Deactivated successfully.
+Nov 21 11:04:22 localhost dockerd[1212]: time="2022-11-21T11:04:22.098995633-08:00" level=info msg="Layer sha256:509208fa62bdc147ef6cf3fd70c1c50811a20ed607a4d44981bcc03fe9918dcf cleaned up"
+Nov 21 11:04:22 localhost dockerd[1212]: time="2022-11-21T11:04:22.226708834-08:00" level=info msg="Layer sha256:509208fa62bdc147ef6cf3fd70c1c50811a20ed607a4d44981bcc03fe9918dcf cleaned up"
+Nov 21 11:04:22 localhost systemd[1]: var-lib-docker-overlay2-7021ce13d43a56b4aad61b8711175ec1dc7c1caa82bfed34d85def6971e57802\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:04:26 localhost systemd[1]: var-lib-docker-overlay2-9c449bb738e59886c647135b0c096d9c2c6985a36efac44945e29752f05da9ea\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:04:26 localhost kernel: docker0: port 1(veth343d52b) entered blocking state
+Nov 21 11:04:26 localhost kernel: docker0: port 1(veth343d52b) entered disabled state
+Nov 21 11:04:26 localhost kernel: device veth343d52b entered promiscuous mode
+Nov 21 11:04:26 localhost audit: ANOM_PROMISCUOUS dev=veth343d52b prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:04:26 localhost NetworkManager[1112]: <info>  [1669057466.5449] manager: (veth5597f03): new Veth device (/org/freedesktop/NetworkManager/Devices/68)
+Nov 21 11:04:26 localhost systemd-udevd[12057]: Using default interface naming scheme 'v249'.
+Nov 21 11:04:26 localhost NetworkManager[1112]: <info>  [1669057466.5461] manager: (veth343d52b): new Veth device (/org/freedesktop/NetworkManager/Devices/69)
+Nov 21 11:04:26 localhost systemd-udevd[12059]: Using default interface naming scheme 'v249'.
+Nov 21 11:04:26 localhost audit[12071]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=12071 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:04:26 localhost audit[12086]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=12086 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:04:26 localhost audit[12088]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=12088 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:04:26 localhost containerd[1123]: time="2022-11-21T11:04:26.607228062-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:04:26 localhost containerd[1123]: time="2022-11-21T11:04:26.607373534-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:04:26 localhost containerd[1123]: time="2022-11-21T11:04:26.607388241-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:04:26 localhost containerd[1123]: time="2022-11-21T11:04:26.607589371-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/8ab6be8c11a2d611cc65130b48803da7f026bd4d29558957860b8f3dfc93be8b pid=12112 runtime=io.containerd.runc.v2
+Nov 21 11:04:26 localhost kernel: eth0: renamed from veth5597f03
+Nov 21 11:04:26 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth343d52b: link becomes ready
+Nov 21 11:04:26 localhost kernel: docker0: port 1(veth343d52b) entered blocking state
+Nov 21 11:04:26 localhost kernel: docker0: port 1(veth343d52b) entered forwarding state
+Nov 21 11:04:26 localhost NetworkManager[1112]: <info>  [1669057466.7509] device (veth343d52b): carrier: link connected
+Nov 21 11:04:26 localhost NetworkManager[1112]: <info>  [1669057466.7514] device (docker0): carrier: link connected
+Nov 21 11:04:26 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:04:28 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth343d52b.IPv6 with address fe80::b87a:d9ff:fe17:c8d4.
+Nov 21 11:04:28 localhost avahi-daemon[943]: New relevant interface veth343d52b.IPv6 for mDNS.
+Nov 21 11:04:28 localhost avahi-daemon[943]: Registering new address record for fe80::b87a:d9ff:fe17:c8d4 on veth343d52b.*.
+Nov 21 11:09:28 localhost containerd[1123]: time="2022-11-21T11:09:28.623352420-08:00" level=info msg="shim disconnected" id=8ab6be8c11a2d611cc65130b48803da7f026bd4d29558957860b8f3dfc93be8b
+Nov 21 11:09:28 localhost containerd[1123]: time="2022-11-21T11:09:28.624276369-08:00" level=warning msg="cleaning up after shim disconnected" id=8ab6be8c11a2d611cc65130b48803da7f026bd4d29558957860b8f3dfc93be8b namespace=moby
+Nov 21 11:09:28 localhost containerd[1123]: time="2022-11-21T11:09:28.624320415-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:09:28 localhost dockerd[1212]: time="2022-11-21T11:09:28.623535093-08:00" level=info msg="ignoring event" container=8ab6be8c11a2d611cc65130b48803da7f026bd4d29558957860b8f3dfc93be8b module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:09:28 localhost containerd[1123]: time="2022-11-21T11:09:28.635040521-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:09:28-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=12654 runtime=io.containerd.runc.v2\n"
+Nov 21 11:09:28 localhost audit[12667]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=12667 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:09:28 localhost audit[12669]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=12669 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:09:28 localhost audit[12671]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=12671 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:09:28 localhost kernel: docker0: port 1(veth343d52b) entered disabled state
+Nov 21 11:09:28 localhost kernel: veth5597f03: renamed from eth0
+Nov 21 11:09:28 localhost NetworkManager[1112]: <info>  [1669057768.6955] manager: (veth5597f03): new Veth device (/org/freedesktop/NetworkManager/Devices/70)
+Nov 21 11:09:28 localhost avahi-daemon[943]: Interface veth343d52b.IPv6 no longer relevant for mDNS.
+Nov 21 11:09:28 localhost audit: ANOM_PROMISCUOUS dev=veth343d52b prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:09:28 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth343d52b.IPv6 with address fe80::b87a:d9ff:fe17:c8d4.
+Nov 21 11:09:28 localhost kernel: docker0: port 1(veth343d52b) entered disabled state
+Nov 21 11:09:28 localhost kernel: device veth343d52b left promiscuous mode
+Nov 21 11:09:28 localhost kernel: docker0: port 1(veth343d52b) entered disabled state
+Nov 21 11:09:28 localhost avahi-daemon[943]: Withdrawing address record for fe80::b87a:d9ff:fe17:c8d4 on veth343d52b.
+Nov 21 11:09:28 localhost NetworkManager[1112]: <info>  [1669057768.7089] device (veth343d52b): released from master device docker0
+Nov 21 11:09:28 localhost systemd[1]: run-docker-netns-25a8fdffa7f4.mount: Deactivated successfully.
+Nov 21 11:09:28 localhost systemd[1]: var-lib-docker-overlay2-9c449bb738e59886c647135b0c096d9c2c6985a36efac44945e29752f05da9ea-merged.mount: Deactivated successfully.
+Nov 21 11:10:37 localhost systemd[1575]: Started Application launched by cinnamon.
+Nov 21 11:11:42 localhost systemd[1575]: Started Application launched by nemo.
+Nov 21 11:11:42 localhost systemd[1575]: Created slice Slice /app/dbus-:1.2-org.x.reader.Daemon.
+Nov 21 11:11:42 localhost systemd[1575]: Started dbus-:1.2-org.x.reader.Daemon@0.service.
+Nov 21 11:14:01 localhost systemd[1]: var-lib-docker-overlay2-09f9fee557f3d718fae75591bcc4486498ed6409e4fb7795634a6ede35b516fb-merged.mount: Deactivated successfully.
+Nov 21 11:14:01 localhost systemd[1]: var-lib-docker-overlay2-67fac326b8fe49022530a5735756e7474e2207f2b13f06e17ba6169cecc5c9de-merged.mount: Deactivated successfully.
+Nov 21 11:14:01 localhost audit: ANOM_PROMISCUOUS dev=vethfe849c8 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:01 localhost kernel: docker0: port 1(vethfe849c8) entered blocking state
+Nov 21 11:14:01 localhost kernel: docker0: port 1(vethfe849c8) entered disabled state
+Nov 21 11:14:01 localhost kernel: device vethfe849c8 entered promiscuous mode
+Nov 21 11:14:01 localhost NetworkManager[1112]: <info>  [1669058041.9443] manager: (veth07d00ff): new Veth device (/org/freedesktop/NetworkManager/Devices/71)
+Nov 21 11:14:01 localhost NetworkManager[1112]: <info>  [1669058041.9455] manager: (vethfe849c8): new Veth device (/org/freedesktop/NetworkManager/Devices/72)
+Nov 21 11:14:01 localhost systemd-udevd[13281]: Using default interface naming scheme 'v249'.
+Nov 21 11:14:01 localhost systemd-udevd[13282]: Using default interface naming scheme 'v249'.
+Nov 21 11:14:01 localhost containerd[1123]: time="2022-11-21T11:14:01.985598369-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:14:01 localhost containerd[1123]: time="2022-11-21T11:14:01.985878355-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:14:01 localhost containerd[1123]: time="2022-11-21T11:14:01.985918622-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:14:01 localhost containerd[1123]: time="2022-11-21T11:14:01.986347676-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/5fa37985133db57091658e0583b3ee51444286dd4426d32d78ae4f5c5e726959 pid=13307 runtime=io.containerd.runc.v2
+Nov 21 11:14:02 localhost kernel: eth0: renamed from veth07d00ff
+Nov 21 11:14:02 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethfe849c8: link becomes ready
+Nov 21 11:14:02 localhost kernel: docker0: port 1(vethfe849c8) entered blocking state
+Nov 21 11:14:02 localhost kernel: docker0: port 1(vethfe849c8) entered forwarding state
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.1438] device (vethfe849c8): carrier: link connected
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.1444] device (docker0): carrier: link connected
+Nov 21 11:14:02 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.248170183-08:00" level=info msg="shim disconnected" id=5fa37985133db57091658e0583b3ee51444286dd4426d32d78ae4f5c5e726959
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.248375214-08:00" level=warning msg="cleaning up after shim disconnected" id=5fa37985133db57091658e0583b3ee51444286dd4426d32d78ae4f5c5e726959 namespace=moby
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.248438832-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:14:02 localhost dockerd[1212]: time="2022-11-21T11:14:02.248333205-08:00" level=info msg="ignoring event" container=5fa37985133db57091658e0583b3ee51444286dd4426d32d78ae4f5c5e726959 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:14:02 localhost systemd[1]: var-lib-docker-overlay2-2fc01d737947016d7d9cbd5b441e23226afa7f5d8375cb0efe3d961af522aff5-merged.mount: Deactivated successfully.
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.262842355-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:14:02-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=13385 runtime=io.containerd.runc.v2\n"
+Nov 21 11:14:02 localhost kernel: docker0: port 1(vethfe849c8) entered disabled state
+Nov 21 11:14:02 localhost kernel: veth07d00ff: renamed from eth0
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.2954] manager: (veth07d00ff): new Veth device (/org/freedesktop/NetworkManager/Devices/73)
+Nov 21 11:14:02 localhost systemd-udevd[13289]: Using default interface naming scheme 'v249'.
+Nov 21 11:14:02 localhost kernel: docker0: port 1(vethfe849c8) entered disabled state
+Nov 21 11:14:02 localhost audit: ANOM_PROMISCUOUS dev=vethfe849c8 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:02 localhost kernel: device vethfe849c8 left promiscuous mode
+Nov 21 11:14:02 localhost kernel: docker0: port 1(vethfe849c8) entered disabled state
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.3078] device (vethfe849c8): released from master device docker0
+Nov 21 11:14:02 localhost systemd[1]: run-docker-netns-15fc35aed9c5.mount: Deactivated successfully.
+Nov 21 11:14:02 localhost systemd[1]: var-lib-docker-overlay2-99b02c2e1200120b4fb7866b0ff57583fddcf43c0e4faaf53d8627e67f912665-merged.mount: Deactivated successfully.
+Nov 21 11:14:02 localhost systemd[1]: var-lib-docker-overlay2-99b02c2e1200120b4fb7866b0ff57583fddcf43c0e4faaf53d8627e67f912665-merged.mount: Deactivated successfully.
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered blocking state
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered disabled state
+Nov 21 11:14:02 localhost kernel: device veth8a05716 entered promiscuous mode
+Nov 21 11:14:02 localhost audit: ANOM_PROMISCUOUS dev=veth8a05716 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:02 localhost systemd-udevd[13286]: Using default interface naming scheme 'v249'.
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered blocking state
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered forwarding state
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.4967] manager: (vethde428eb): new Veth device (/org/freedesktop/NetworkManager/Devices/74)
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.4981] manager: (veth8a05716): new Veth device (/org/freedesktop/NetworkManager/Devices/75)
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.536066871-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.536233038-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.536253302-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.536528356-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/5a7ed2969cc3690d0aa1940ad31278db5c85a6cde1277c38d0d2d0bacd1ba240 pid=13438 runtime=io.containerd.runc.v2
+Nov 21 11:14:02 localhost kernel: eth0: renamed from vethde428eb
+Nov 21 11:14:02 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth8a05716: link becomes ready
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.7133] device (veth8a05716): carrier: link connected
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.7141] device (docker0): carrier: link connected
+Nov 21 11:14:02 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.809161732-08:00" level=info msg="shim disconnected" id=5a7ed2969cc3690d0aa1940ad31278db5c85a6cde1277c38d0d2d0bacd1ba240
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.809302913-08:00" level=warning msg="cleaning up after shim disconnected" id=5a7ed2969cc3690d0aa1940ad31278db5c85a6cde1277c38d0d2d0bacd1ba240 namespace=moby
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.809335343-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:14:02 localhost dockerd[1212]: time="2022-11-21T11:14:02.809545488-08:00" level=info msg="ignoring event" container=5a7ed2969cc3690d0aa1940ad31278db5c85a6cde1277c38d0d2d0bacd1ba240 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:14:02 localhost containerd[1123]: time="2022-11-21T11:14:02.828529530-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:14:02-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=13497 runtime=io.containerd.runc.v2\n"
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered disabled state
+Nov 21 11:14:02 localhost kernel: vethde428eb: renamed from eth0
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered disabled state
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.8627] manager: (vethde428eb): new Veth device (/org/freedesktop/NetworkManager/Devices/76)
+Nov 21 11:14:02 localhost audit: ANOM_PROMISCUOUS dev=veth8a05716 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:02 localhost kernel: device veth8a05716 left promiscuous mode
+Nov 21 11:14:02 localhost kernel: docker0: port 1(veth8a05716) entered disabled state
+Nov 21 11:14:02 localhost NetworkManager[1112]: <info>  [1669058042.8779] device (veth8a05716): released from master device docker0
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered blocking state
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered disabled state
+Nov 21 11:14:03 localhost audit: ANOM_PROMISCUOUS dev=vethb3a5b5a prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:03 localhost kernel: device vethb3a5b5a entered promiscuous mode
+Nov 21 11:14:03 localhost NetworkManager[1112]: <info>  [1669058043.0416] manager: (veth19d868b): new Veth device (/org/freedesktop/NetworkManager/Devices/77)
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered blocking state
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered forwarding state
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered disabled state
+Nov 21 11:14:03 localhost NetworkManager[1112]: <info>  [1669058043.0429] manager: (vethb3a5b5a): new Veth device (/org/freedesktop/NetworkManager/Devices/78)
+Nov 21 11:14:03 localhost containerd[1123]: time="2022-11-21T11:14:03.078426067-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:14:03 localhost containerd[1123]: time="2022-11-21T11:14:03.078541217-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:14:03 localhost containerd[1123]: time="2022-11-21T11:14:03.078561948-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:14:03 localhost containerd[1123]: time="2022-11-21T11:14:03.079232741-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/376c0f1582c8c93b0f184fe48dc5d8cd641726bc1f5de496fd1d6235cb219abb pid=13540 runtime=io.containerd.runc.v2
+Nov 21 11:14:03 localhost kernel: eth0: renamed from veth19d868b
+Nov 21 11:14:03 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethb3a5b5a: link becomes ready
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered blocking state
+Nov 21 11:14:03 localhost kernel: docker0: port 1(vethb3a5b5a) entered forwarding state
+Nov 21 11:14:03 localhost NetworkManager[1112]: <info>  [1669058043.2365] device (vethb3a5b5a): carrier: link connected
+Nov 21 11:14:03 localhost NetworkManager[1112]: <info>  [1669058043.2369] device (docker0): carrier: link connected
+Nov 21 11:14:03 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:14:05 localhost avahi-daemon[943]: Joining mDNS multicast group on interface vethb3a5b5a.IPv6 with address fe80::30f2:84ff:fed9:fd0b.
+Nov 21 11:14:05 localhost avahi-daemon[943]: New relevant interface vethb3a5b5a.IPv6 for mDNS.
+Nov 21 11:14:05 localhost avahi-daemon[943]: Registering new address record for fe80::30f2:84ff:fed9:fd0b on vethb3a5b5a.*.
+Nov 21 11:14:05 localhost containerd[1123]: time="2022-11-21T11:14:05.264335249-08:00" level=info msg="shim disconnected" id=376c0f1582c8c93b0f184fe48dc5d8cd641726bc1f5de496fd1d6235cb219abb
+Nov 21 11:14:05 localhost containerd[1123]: time="2022-11-21T11:14:05.264433299-08:00" level=warning msg="cleaning up after shim disconnected" id=376c0f1582c8c93b0f184fe48dc5d8cd641726bc1f5de496fd1d6235cb219abb namespace=moby
+Nov 21 11:14:05 localhost containerd[1123]: time="2022-11-21T11:14:05.264477834-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:14:05 localhost dockerd[1212]: time="2022-11-21T11:14:05.264499730-08:00" level=info msg="ignoring event" container=376c0f1582c8c93b0f184fe48dc5d8cd641726bc1f5de496fd1d6235cb219abb module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:14:05 localhost containerd[1123]: time="2022-11-21T11:14:05.277673984-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:14:05-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=13617 runtime=io.containerd.runc.v2\n"
+Nov 21 11:14:05 localhost kernel: docker0: port 1(vethb3a5b5a) entered disabled state
+Nov 21 11:14:05 localhost kernel: veth19d868b: renamed from eth0
+Nov 21 11:14:05 localhost NetworkManager[1112]: <info>  [1669058045.3032] manager: (veth19d868b): new Veth device (/org/freedesktop/NetworkManager/Devices/79)
+Nov 21 11:14:05 localhost avahi-daemon[943]: Interface vethb3a5b5a.IPv6 no longer relevant for mDNS.
+Nov 21 11:14:05 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethb3a5b5a.IPv6 with address fe80::30f2:84ff:fed9:fd0b.
+Nov 21 11:14:05 localhost kernel: docker0: port 1(vethb3a5b5a) entered disabled state
+Nov 21 11:14:05 localhost kernel: device vethb3a5b5a left promiscuous mode
+Nov 21 11:14:05 localhost kernel: docker0: port 1(vethb3a5b5a) entered disabled state
+Nov 21 11:14:05 localhost audit: ANOM_PROMISCUOUS dev=vethb3a5b5a prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:05 localhost avahi-daemon[943]: Withdrawing address record for fe80::30f2:84ff:fed9:fd0b on vethb3a5b5a.
+Nov 21 11:14:05 localhost NetworkManager[1112]: <info>  [1669058045.3188] device (vethb3a5b5a): released from master device docker0
+Nov 21 11:14:05 localhost systemd[1]: run-docker-netns-3b04bcacc217.mount: Deactivated successfully.
+Nov 21 11:14:05 localhost systemd[1]: var-lib-docker-overlay2-5557b5170b6a305dac48012516c0898f430092e9fb471033f6695912bdfd62b9-merged.mount: Deactivated successfully.
+Nov 21 11:14:05 localhost systemd[1]: var-lib-docker-overlay2-5557b5170b6a305dac48012516c0898f430092e9fb471033f6695912bdfd62b9-merged.mount: Deactivated successfully.
+Nov 21 11:14:06 localhost dockerd[1212]: time="2022-11-21T11:14:06.287212941-08:00" level=info msg="Layer sha256:5fea5eeb20b6a697335c334c4b1dcd95883516871fd9733d91aeff821e0244a9 cleaned up"
+Nov 21 11:14:06 localhost systemd[1]: var-lib-docker-overlay2-7041972b79f7b1576708dabed2031fe46dc399c8db79187f630883119ac52920\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:14:06 localhost dockerd[1212]: time="2022-11-21T11:14:06.411830781-08:00" level=info msg="Layer sha256:5fea5eeb20b6a697335c334c4b1dcd95883516871fd9733d91aeff821e0244a9 cleaned up"
+Nov 21 11:14:06 localhost systemd[1]: var-lib-docker-overlay2-1b9d9bc8baee633408799cfca9863376947ea17ea89a1db7d9e85bdceef30423-merged.mount: Deactivated successfully.
+Nov 21 11:14:07 localhost systemd[1]: var-lib-docker-overlay2-6f0963223e521b17bf47ce87fd0ff350da557d3b89f89e2ec7ee0f9bc51047a8\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:14:07 localhost systemd[1]: var-lib-docker-overlay2-6f0963223e521b17bf47ce87fd0ff350da557d3b89f89e2ec7ee0f9bc51047a8-merged.mount: Deactivated successfully.
+Nov 21 11:14:07 localhost kernel: docker0: port 1(vethdc5a150) entered blocking state
+Nov 21 11:14:07 localhost kernel: docker0: port 1(vethdc5a150) entered disabled state
+Nov 21 11:14:07 localhost kernel: device vethdc5a150 entered promiscuous mode
+Nov 21 11:14:07 localhost audit: ANOM_PROMISCUOUS dev=vethdc5a150 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:14:07 localhost NetworkManager[1112]: <info>  [1669058047.6842] manager: (vethec9fbe3): new Veth device (/org/freedesktop/NetworkManager/Devices/80)
+Nov 21 11:14:07 localhost NetworkManager[1112]: <info>  [1669058047.6863] manager: (vethdc5a150): new Veth device (/org/freedesktop/NetworkManager/Devices/81)
+Nov 21 11:14:07 localhost audit[13696]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=13696 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:14:07 localhost audit[13698]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=13698 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:14:07 localhost audit[13700]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=13700 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:14:07 localhost containerd[1123]: time="2022-11-21T11:14:07.746515676-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:14:07 localhost containerd[1123]: time="2022-11-21T11:14:07.746666866-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:14:07 localhost containerd[1123]: time="2022-11-21T11:14:07.746681974-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:14:07 localhost containerd[1123]: time="2022-11-21T11:14:07.746910308-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/67109a6bfd7e5c8305a608c076c16eb4d9d324d96b29bd5cc8978012606dfa4b pid=13722 runtime=io.containerd.runc.v2
+Nov 21 11:14:07 localhost kernel: eth0: renamed from vethec9fbe3
+Nov 21 11:14:07 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethdc5a150: link becomes ready
+Nov 21 11:14:07 localhost kernel: docker0: port 1(vethdc5a150) entered blocking state
+Nov 21 11:14:07 localhost kernel: docker0: port 1(vethdc5a150) entered forwarding state
+Nov 21 11:14:07 localhost NetworkManager[1112]: <info>  [1669058047.9053] device (vethdc5a150): carrier: link connected
+Nov 21 11:14:07 localhost NetworkManager[1112]: <info>  [1669058047.9061] device (docker0): carrier: link connected
+Nov 21 11:14:07 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:14:09 localhost avahi-daemon[943]: Joining mDNS multicast group on interface vethdc5a150.IPv6 with address fe80::c8d5:b7ff:fec2:bcf2.
+Nov 21 11:14:09 localhost avahi-daemon[943]: New relevant interface vethdc5a150.IPv6 for mDNS.
+Nov 21 11:14:09 localhost avahi-daemon[943]: Registering new address record for fe80::c8d5:b7ff:fec2:bcf2 on vethdc5a150.*.
+Nov 21 11:15:00 localhost containerd[1123]: time="2022-11-21T11:15:00.538931287-08:00" level=info msg="shim disconnected" id=67109a6bfd7e5c8305a608c076c16eb4d9d324d96b29bd5cc8978012606dfa4b
+Nov 21 11:15:00 localhost containerd[1123]: time="2022-11-21T11:15:00.539280408-08:00" level=warning msg="cleaning up after shim disconnected" id=67109a6bfd7e5c8305a608c076c16eb4d9d324d96b29bd5cc8978012606dfa4b namespace=moby
+Nov 21 11:15:00 localhost containerd[1123]: time="2022-11-21T11:15:00.539297246-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:15:00 localhost dockerd[1212]: time="2022-11-21T11:15:00.539011298-08:00" level=info msg="ignoring event" container=67109a6bfd7e5c8305a608c076c16eb4d9d324d96b29bd5cc8978012606dfa4b module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:15:00 localhost containerd[1123]: time="2022-11-21T11:15:00.552626967-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:15:00-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=13940 runtime=io.containerd.runc.v2\n"
+Nov 21 11:15:00 localhost audit[13956]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=13956 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:00 localhost audit[13958]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=13958 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:00 localhost audit[13960]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=13960 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:00 localhost kernel: docker0: port 1(vethdc5a150) entered disabled state
+Nov 21 11:15:00 localhost kernel: vethec9fbe3: renamed from eth0
+Nov 21 11:15:00 localhost NetworkManager[1112]: <info>  [1669058100.6134] manager: (vethec9fbe3): new Veth device (/org/freedesktop/NetworkManager/Devices/82)
+Nov 21 11:15:00 localhost kernel: docker0: port 1(vethdc5a150) entered disabled state
+Nov 21 11:15:00 localhost avahi-daemon[943]: Interface vethdc5a150.IPv6 no longer relevant for mDNS.
+Nov 21 11:15:00 localhost kernel: device vethdc5a150 left promiscuous mode
+Nov 21 11:15:00 localhost kernel: docker0: port 1(vethdc5a150) entered disabled state
+Nov 21 11:15:00 localhost audit: ANOM_PROMISCUOUS dev=vethdc5a150 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:00 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethdc5a150.IPv6 with address fe80::c8d5:b7ff:fec2:bcf2.
+Nov 21 11:15:00 localhost avahi-daemon[943]: Withdrawing address record for fe80::c8d5:b7ff:fec2:bcf2 on vethdc5a150.
+Nov 21 11:15:00 localhost NetworkManager[1112]: <info>  [1669058100.6355] device (vethdc5a150): released from master device docker0
+Nov 21 11:15:00 localhost systemd[1]: run-docker-netns-2561f462c099.mount: Deactivated successfully.
+Nov 21 11:15:00 localhost systemd[1]: var-lib-docker-overlay2-6f0963223e521b17bf47ce87fd0ff350da557d3b89f89e2ec7ee0f9bc51047a8-merged.mount: Deactivated successfully.
+Nov 21 11:15:05 localhost systemd[1]: var-lib-docker-overlay2-6ab47b7816cca0b42d72b45ab99062f3e20a6e5b8903d411ed441182994e012c-merged.mount: Deactivated successfully.
+Nov 21 11:15:05 localhost systemd[1]: var-lib-docker-overlay2-5701236ae8881ed93840a9e6d7d027b2efca86720f4505a66b9913b20e033a4e-merged.mount: Deactivated successfully.
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered blocking state
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered disabled state
+Nov 21 11:15:06 localhost kernel: device veth19d5d15 entered promiscuous mode
+Nov 21 11:15:06 localhost audit: ANOM_PROMISCUOUS dev=veth19d5d15 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:06 localhost systemd-udevd[14105]: Using default interface naming scheme 'v249'.
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.2547] manager: (vethf14ceae): new Veth device (/org/freedesktop/NetworkManager/Devices/83)
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.2572] manager: (veth19d5d15): new Veth device (/org/freedesktop/NetworkManager/Devices/84)
+Nov 21 11:15:06 localhost systemd-udevd[14107]: Using default interface naming scheme 'v249'.
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.301736936-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.301929978-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.301948988-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.302270704-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/a06df5b824f6b927b17acd16d9d5974f4adeddeeb229ee158ed3c25537a523e6 pid=14137 runtime=io.containerd.runc.v2
+Nov 21 11:15:06 localhost kernel: eth0: renamed from vethf14ceae
+Nov 21 11:15:06 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth19d5d15: link becomes ready
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered blocking state
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered forwarding state
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.4584] device (veth19d5d15): carrier: link connected
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.4588] device (docker0): carrier: link connected
+Nov 21 11:15:06 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:15:06 localhost systemd[1]: var-lib-docker-overlay2-c0a28d30a850ea82181d73dcee5a4c5685b5d850e70561bb0064628921a8dfdb-merged.mount: Deactivated successfully.
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.599918553-08:00" level=info msg="shim disconnected" id=a06df5b824f6b927b17acd16d9d5974f4adeddeeb229ee158ed3c25537a523e6
+Nov 21 11:15:06 localhost dockerd[1212]: time="2022-11-21T11:15:06.599977885-08:00" level=info msg="ignoring event" container=a06df5b824f6b927b17acd16d9d5974f4adeddeeb229ee158ed3c25537a523e6 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.600217201-08:00" level=warning msg="cleaning up after shim disconnected" id=a06df5b824f6b927b17acd16d9d5974f4adeddeeb229ee158ed3c25537a523e6 namespace=moby
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.600239720-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.609999757-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:15:06-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=14208 runtime=io.containerd.runc.v2\n"
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered disabled state
+Nov 21 11:15:06 localhost kernel: vethf14ceae: renamed from eth0
+Nov 21 11:15:06 localhost systemd-udevd[14128]: Using default interface naming scheme 'v249'.
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.6520] manager: (vethf14ceae): new Veth device (/org/freedesktop/NetworkManager/Devices/85)
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered disabled state
+Nov 21 11:15:06 localhost audit: ANOM_PROMISCUOUS dev=veth19d5d15 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:06 localhost kernel: device veth19d5d15 left promiscuous mode
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth19d5d15) entered disabled state
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.6745] device (veth19d5d15): released from master device docker0
+Nov 21 11:15:06 localhost systemd[1]: run-docker-netns-dcaa483218c5.mount: Deactivated successfully.
+Nov 21 11:15:06 localhost systemd[1]: var-lib-docker-overlay2-4ba5c457285114a25db97dbab5a9e5214fa0a22c5bb2c61aae4ccaa0615cd728-merged.mount: Deactivated successfully.
+Nov 21 11:15:06 localhost systemd[1]: var-lib-docker-overlay2-4ba5c457285114a25db97dbab5a9e5214fa0a22c5bb2c61aae4ccaa0615cd728-merged.mount: Deactivated successfully.
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth63fcdcd) entered blocking state
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth63fcdcd) entered disabled state
+Nov 21 11:15:06 localhost kernel: device veth63fcdcd entered promiscuous mode
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth63fcdcd) entered blocking state
+Nov 21 11:15:06 localhost kernel: docker0: port 1(veth63fcdcd) entered forwarding state
+Nov 21 11:15:06 localhost audit: ANOM_PROMISCUOUS dev=veth63fcdcd prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.9063] manager: (veth1b861e9): new Veth device (/org/freedesktop/NetworkManager/Devices/86)
+Nov 21 11:15:06 localhost NetworkManager[1112]: <info>  [1669058106.9083] manager: (veth63fcdcd): new Veth device (/org/freedesktop/NetworkManager/Devices/87)
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.950852547-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.950940356-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.950958678-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:15:06 localhost containerd[1123]: time="2022-11-21T11:15:06.951276324-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/3b595133e63aa0344171ad7b781aa06b2deeb83099fe12af677873d24bf4d128 pid=14249 runtime=io.containerd.runc.v2
+Nov 21 11:15:07 localhost kernel: eth0: renamed from veth1b861e9
+Nov 21 11:15:07 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth63fcdcd: link becomes ready
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.1133] device (veth63fcdcd): carrier: link connected
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.1141] device (docker0): carrier: link connected
+Nov 21 11:15:07 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.264158664-08:00" level=info msg="shim disconnected" id=3b595133e63aa0344171ad7b781aa06b2deeb83099fe12af677873d24bf4d128
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.264345608-08:00" level=warning msg="cleaning up after shim disconnected" id=3b595133e63aa0344171ad7b781aa06b2deeb83099fe12af677873d24bf4d128 namespace=moby
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.264405461-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:15:07 localhost dockerd[1212]: time="2022-11-21T11:15:07.264500327-08:00" level=info msg="ignoring event" container=3b595133e63aa0344171ad7b781aa06b2deeb83099fe12af677873d24bf4d128 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.278934772-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:15:07-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=14306 runtime=io.containerd.runc.v2\n"
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth63fcdcd) entered disabled state
+Nov 21 11:15:07 localhost kernel: veth1b861e9: renamed from eth0
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.3098] manager: (veth1b861e9): new Veth device (/org/freedesktop/NetworkManager/Devices/88)
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth63fcdcd) entered disabled state
+Nov 21 11:15:07 localhost kernel: device veth63fcdcd left promiscuous mode
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth63fcdcd) entered disabled state
+Nov 21 11:15:07 localhost audit: ANOM_PROMISCUOUS dev=veth63fcdcd prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.3307] device (veth63fcdcd): released from master device docker0
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth171bb52) entered blocking state
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth171bb52) entered disabled state
+Nov 21 11:15:07 localhost kernel: device veth171bb52 entered promiscuous mode
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth171bb52) entered blocking state
+Nov 21 11:15:07 localhost kernel: docker0: port 1(veth171bb52) entered forwarding state
+Nov 21 11:15:07 localhost audit: ANOM_PROMISCUOUS dev=veth171bb52 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.4927] manager: (veth6372b20): new Veth device (/org/freedesktop/NetworkManager/Devices/89)
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.4941] manager: (veth171bb52): new Veth device (/org/freedesktop/NetworkManager/Devices/90)
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.537867139-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.537938989-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.537956404-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:15:07 localhost containerd[1123]: time="2022-11-21T11:15:07.538398291-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/93246ffe1976d012c2252361a933fc9a7341bd6963eeda23e76f027ac366e0f8 pid=14344 runtime=io.containerd.runc.v2
+Nov 21 11:15:07 localhost kernel: eth0: renamed from veth6372b20
+Nov 21 11:15:07 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth171bb52: link becomes ready
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.6880] device (veth171bb52): carrier: link connected
+Nov 21 11:15:07 localhost NetworkManager[1112]: <info>  [1669058107.6885] device (docker0): carrier: link connected
+Nov 21 11:15:07 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:15:08 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth171bb52.IPv6 with address fe80::5cda:4dff:feba:f99e.
+Nov 21 11:15:08 localhost avahi-daemon[943]: New relevant interface veth171bb52.IPv6 for mDNS.
+Nov 21 11:15:08 localhost avahi-daemon[943]: Registering new address record for fe80::5cda:4dff:feba:f99e on veth171bb52.*.
+Nov 21 11:15:09 localhost containerd[1123]: time="2022-11-21T11:15:09.692604089-08:00" level=info msg="shim disconnected" id=93246ffe1976d012c2252361a933fc9a7341bd6963eeda23e76f027ac366e0f8
+Nov 21 11:15:09 localhost containerd[1123]: time="2022-11-21T11:15:09.693050134-08:00" level=warning msg="cleaning up after shim disconnected" id=93246ffe1976d012c2252361a933fc9a7341bd6963eeda23e76f027ac366e0f8 namespace=moby
+Nov 21 11:15:09 localhost containerd[1123]: time="2022-11-21T11:15:09.693077489-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:15:09 localhost dockerd[1212]: time="2022-11-21T11:15:09.692938453-08:00" level=info msg="ignoring event" container=93246ffe1976d012c2252361a933fc9a7341bd6963eeda23e76f027ac366e0f8 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:15:09 localhost containerd[1123]: time="2022-11-21T11:15:09.705055914-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:15:09-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=14421 runtime=io.containerd.runc.v2\n"
+Nov 21 11:15:09 localhost kernel: docker0: port 1(veth171bb52) entered disabled state
+Nov 21 11:15:09 localhost kernel: veth6372b20: renamed from eth0
+Nov 21 11:15:09 localhost NetworkManager[1112]: <info>  [1669058109.7524] manager: (veth6372b20): new Veth device (/org/freedesktop/NetworkManager/Devices/91)
+Nov 21 11:15:09 localhost avahi-daemon[943]: Interface veth171bb52.IPv6 no longer relevant for mDNS.
+Nov 21 11:15:09 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth171bb52.IPv6 with address fe80::5cda:4dff:feba:f99e.
+Nov 21 11:15:09 localhost kernel: docker0: port 1(veth171bb52) entered disabled state
+Nov 21 11:15:09 localhost audit: ANOM_PROMISCUOUS dev=veth171bb52 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:09 localhost kernel: device veth171bb52 left promiscuous mode
+Nov 21 11:15:09 localhost kernel: docker0: port 1(veth171bb52) entered disabled state
+Nov 21 11:15:09 localhost avahi-daemon[943]: Withdrawing address record for fe80::5cda:4dff:feba:f99e on veth171bb52.
+Nov 21 11:15:09 localhost NetworkManager[1112]: <info>  [1669058109.7695] device (veth171bb52): released from master device docker0
+Nov 21 11:15:09 localhost systemd[1]: run-docker-netns-fe07bbb6792a.mount: Deactivated successfully.
+Nov 21 11:15:09 localhost systemd[1]: var-lib-docker-overlay2-9cdad0c8850fc99423e0ddff710bbe6eea90c33d4615b4d4cc0ac9337973c4d7-merged.mount: Deactivated successfully.
+Nov 21 11:15:10 localhost systemd[1]: var-lib-docker-overlay2-9cdad0c8850fc99423e0ddff710bbe6eea90c33d4615b4d4cc0ac9337973c4d7-merged.mount: Deactivated successfully.
+Nov 21 11:15:10 localhost dockerd[1212]: time="2022-11-21T11:15:10.635279186-08:00" level=info msg="Layer sha256:494975b6db46e102b3fdadeb463e53ef3d204a665b01c6a243dc99c068f47c49 cleaned up"
+Nov 21 11:15:10 localhost dockerd[1212]: time="2022-11-21T11:15:10.755670589-08:00" level=info msg="Layer sha256:494975b6db46e102b3fdadeb463e53ef3d204a665b01c6a243dc99c068f47c49 cleaned up"
+Nov 21 11:15:10 localhost systemd[1]: var-lib-docker-overlay2-97a0bdd8ca531ddd119f35e0dfce2b3fc412559238abe92a4620746216adf23a\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:15:11 localhost systemd[1]: var-lib-docker-overlay2-976ea21c75614a40079524fd044c2b7e3bd95e001aa3779317382a6c6254fc6a\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:15:11 localhost audit: ANOM_PROMISCUOUS dev=veth83a3d95 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:15:11 localhost kernel: docker0: port 1(veth83a3d95) entered blocking state
+Nov 21 11:15:11 localhost kernel: docker0: port 1(veth83a3d95) entered disabled state
+Nov 21 11:15:11 localhost kernel: device veth83a3d95 entered promiscuous mode
+Nov 21 11:15:11 localhost NetworkManager[1112]: <info>  [1669058111.8795] manager: (veth7fbb575): new Veth device (/org/freedesktop/NetworkManager/Devices/92)
+Nov 21 11:15:11 localhost NetworkManager[1112]: <info>  [1669058111.8807] manager: (veth83a3d95): new Veth device (/org/freedesktop/NetworkManager/Devices/93)
+Nov 21 11:15:11 localhost audit[14486]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=14486 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:11 localhost audit[14488]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=14488 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:11 localhost audit[14490]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=14490 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:15:11 localhost containerd[1123]: time="2022-11-21T11:15:11.940016087-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:15:11 localhost containerd[1123]: time="2022-11-21T11:15:11.940182360-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:15:11 localhost containerd[1123]: time="2022-11-21T11:15:11.940202525-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:15:11 localhost containerd[1123]: time="2022-11-21T11:15:11.940569518-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/e3ed3977a351ed0362f2e97802e213c3ae86b4eb4770292ca0adaf6af3dd03db pid=14511 runtime=io.containerd.runc.v2
+Nov 21 11:15:12 localhost kernel: eth0: renamed from veth7fbb575
+Nov 21 11:15:12 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth83a3d95: link becomes ready
+Nov 21 11:15:12 localhost kernel: docker0: port 1(veth83a3d95) entered blocking state
+Nov 21 11:15:12 localhost kernel: docker0: port 1(veth83a3d95) entered forwarding state
+Nov 21 11:15:12 localhost NetworkManager[1112]: <info>  [1669058112.0959] device (veth83a3d95): carrier: link connected
+Nov 21 11:15:12 localhost NetworkManager[1112]: <info>  [1669058112.0964] device (docker0): carrier: link connected
+Nov 21 11:15:12 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:15:13 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth83a3d95.IPv6 with address fe80::a499:6dff:fe14:5a8b.
+Nov 21 11:15:13 localhost avahi-daemon[943]: New relevant interface veth83a3d95.IPv6 for mDNS.
+Nov 21 11:15:13 localhost avahi-daemon[943]: Registering new address record for fe80::a499:6dff:fe14:5a8b on veth83a3d95.*.
+Nov 21 11:16:38 localhost containerd[1123]: time="2022-11-21T11:16:38.701742764-08:00" level=info msg="shim disconnected" id=e3ed3977a351ed0362f2e97802e213c3ae86b4eb4770292ca0adaf6af3dd03db
+Nov 21 11:16:38 localhost containerd[1123]: time="2022-11-21T11:16:38.701948252-08:00" level=warning msg="cleaning up after shim disconnected" id=e3ed3977a351ed0362f2e97802e213c3ae86b4eb4770292ca0adaf6af3dd03db namespace=moby
+Nov 21 11:16:38 localhost dockerd[1212]: time="2022-11-21T11:16:38.701620180-08:00" level=info msg="ignoring event" container=e3ed3977a351ed0362f2e97802e213c3ae86b4eb4770292ca0adaf6af3dd03db module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:16:38 localhost containerd[1123]: time="2022-11-21T11:16:38.701964896-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:16:38 localhost containerd[1123]: time="2022-11-21T11:16:38.712581020-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:16:38-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=14797 runtime=io.containerd.runc.v2\n"
+Nov 21 11:16:38 localhost audit[14811]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=14811 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:38 localhost audit[14813]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=14813 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:38 localhost audit[14815]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=14815 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:38 localhost kernel: docker0: port 1(veth83a3d95) entered disabled state
+Nov 21 11:16:38 localhost kernel: veth7fbb575: renamed from eth0
+Nov 21 11:16:38 localhost NetworkManager[1112]: <info>  [1669058198.7738] manager: (veth7fbb575): new Veth device (/org/freedesktop/NetworkManager/Devices/94)
+Nov 21 11:16:38 localhost avahi-daemon[943]: Interface veth83a3d95.IPv6 no longer relevant for mDNS.
+Nov 21 11:16:38 localhost kernel: docker0: port 1(veth83a3d95) entered disabled state
+Nov 21 11:16:38 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth83a3d95.IPv6 with address fe80::a499:6dff:fe14:5a8b.
+Nov 21 11:16:38 localhost kernel: device veth83a3d95 left promiscuous mode
+Nov 21 11:16:38 localhost kernel: docker0: port 1(veth83a3d95) entered disabled state
+Nov 21 11:16:38 localhost audit: ANOM_PROMISCUOUS dev=veth83a3d95 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:38 localhost avahi-daemon[943]: Withdrawing address record for fe80::a499:6dff:fe14:5a8b on veth83a3d95.
+Nov 21 11:16:38 localhost NetworkManager[1112]: <info>  [1669058198.7941] device (veth83a3d95): released from master device docker0
+Nov 21 11:16:38 localhost systemd[1]: run-docker-netns-bcbbf9f585a3.mount: Deactivated successfully.
+Nov 21 11:16:38 localhost systemd[1]: var-lib-docker-overlay2-976ea21c75614a40079524fd044c2b7e3bd95e001aa3779317382a6c6254fc6a-merged.mount: Deactivated successfully.
+Nov 21 11:16:41 localhost systemd[1]: var-lib-docker-overlay2-24b412088e324da97f59f8633de54e0ba261bb6de6284de955b5100abc08f16b-merged.mount: Deactivated successfully.
+Nov 21 11:16:41 localhost systemd[1]: var-lib-docker-overlay2-a8bb0a858da826c1e213c51807e24f6cd1087df3fc1b5f736f97f69e5bd02baf-merged.mount: Deactivated successfully.
+Nov 21 11:16:41 localhost kernel: docker0: port 1(veth6b729ae) entered blocking state
+Nov 21 11:16:41 localhost kernel: docker0: port 1(veth6b729ae) entered disabled state
+Nov 21 11:16:41 localhost kernel: device veth6b729ae entered promiscuous mode
+Nov 21 11:16:41 localhost NetworkManager[1112]: <info>  [1669058201.7856] manager: (vethaa977a1): new Veth device (/org/freedesktop/NetworkManager/Devices/95)
+Nov 21 11:16:41 localhost audit: ANOM_PROMISCUOUS dev=veth6b729ae prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:41 localhost systemd-udevd[14819]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:41 localhost systemd-udevd[14821]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:41 localhost NetworkManager[1112]: <info>  [1669058201.7880] manager: (veth6b729ae): new Veth device (/org/freedesktop/NetworkManager/Devices/96)
+Nov 21 11:16:41 localhost containerd[1123]: time="2022-11-21T11:16:41.826856555-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:16:41 localhost containerd[1123]: time="2022-11-21T11:16:41.827265014-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:16:41 localhost containerd[1123]: time="2022-11-21T11:16:41.827286428-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:16:41 localhost containerd[1123]: time="2022-11-21T11:16:41.827906802-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/20bda700c7563f6445709c7c9b44d7051d189d13e55660f7f1e17818ac59a083 pid=14975 runtime=io.containerd.runc.v2
+Nov 21 11:16:41 localhost kernel: eth0: renamed from vethaa977a1
+Nov 21 11:16:41 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth6b729ae: link becomes ready
+Nov 21 11:16:41 localhost kernel: docker0: port 1(veth6b729ae) entered blocking state
+Nov 21 11:16:41 localhost kernel: docker0: port 1(veth6b729ae) entered forwarding state
+Nov 21 11:16:41 localhost NetworkManager[1112]: <info>  [1669058201.9952] device (veth6b729ae): carrier: link connected
+Nov 21 11:16:41 localhost NetworkManager[1112]: <info>  [1669058201.9956] device (docker0): carrier: link connected
+Nov 21 11:16:42 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:16:42 localhost dockerd[1212]: time="2022-11-21T11:16:42.082962726-08:00" level=info msg="ignoring event" container=20bda700c7563f6445709c7c9b44d7051d189d13e55660f7f1e17818ac59a083 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.082967496-08:00" level=info msg="shim disconnected" id=20bda700c7563f6445709c7c9b44d7051d189d13e55660f7f1e17818ac59a083
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.083167853-08:00" level=warning msg="cleaning up after shim disconnected" id=20bda700c7563f6445709c7c9b44d7051d189d13e55660f7f1e17818ac59a083 namespace=moby
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.083195112-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:16:42 localhost systemd[1]: var-lib-docker-overlay2-9ba4be870a9abe99139457cf432c0a2d830c4c23544c13d8b0823cb5d7907544-merged.mount: Deactivated successfully.
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.093953897-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:16:42-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=15055 runtime=io.containerd.runc.v2\n"
+Nov 21 11:16:42 localhost kernel: vethaa977a1: renamed from eth0
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth6b729ae) entered disabled state
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.1286] manager: (vethaa977a1): new Veth device (/org/freedesktop/NetworkManager/Devices/97)
+Nov 21 11:16:42 localhost systemd-udevd[14980]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth6b729ae) entered disabled state
+Nov 21 11:16:42 localhost audit: ANOM_PROMISCUOUS dev=veth6b729ae prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:42 localhost kernel: device veth6b729ae left promiscuous mode
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth6b729ae) entered disabled state
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.1406] device (veth6b729ae): released from master device docker0
+Nov 21 11:16:42 localhost systemd[1]: run-docker-netns-e80a450b2b9c.mount: Deactivated successfully.
+Nov 21 11:16:42 localhost systemd[1]: var-lib-docker-overlay2-5927d8cec22e61b196f328137c5b3e5b9ca76c113c6aa36fa6f49789cc478d9b-merged.mount: Deactivated successfully.
+Nov 21 11:16:42 localhost systemd[1]: var-lib-docker-overlay2-5927d8cec22e61b196f328137c5b3e5b9ca76c113c6aa36fa6f49789cc478d9b-merged.mount: Deactivated successfully.
+Nov 21 11:16:42 localhost audit: ANOM_PROMISCUOUS dev=vethb349824 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered blocking state
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered disabled state
+Nov 21 11:16:42 localhost kernel: device vethb349824 entered promiscuous mode
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered blocking state
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered forwarding state
+Nov 21 11:16:42 localhost systemd-udevd[14968]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.3521] manager: (veth62647af): new Veth device (/org/freedesktop/NetworkManager/Devices/98)
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.3570] manager: (vethb349824): new Veth device (/org/freedesktop/NetworkManager/Devices/99)
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.397332178-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.397407503-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.397422033-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.397654931-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/3dce9c023f10c4d7307b46d46c1663b6144e6f5f73dfb001ae2d8c3c106c4afc pid=15097 runtime=io.containerd.runc.v2
+Nov 21 11:16:42 localhost kernel: eth0: renamed from veth62647af
+Nov 21 11:16:42 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethb349824: link becomes ready
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.5482] device (vethb349824): carrier: link connected
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.5488] device (docker0): carrier: link connected
+Nov 21 11:16:42 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:16:42 localhost dockerd[1212]: time="2022-11-21T11:16:42.696201032-08:00" level=info msg="ignoring event" container=3dce9c023f10c4d7307b46d46c1663b6144e6f5f73dfb001ae2d8c3c106c4afc module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.696907179-08:00" level=info msg="shim disconnected" id=3dce9c023f10c4d7307b46d46c1663b6144e6f5f73dfb001ae2d8c3c106c4afc
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.696990381-08:00" level=warning msg="cleaning up after shim disconnected" id=3dce9c023f10c4d7307b46d46c1663b6144e6f5f73dfb001ae2d8c3c106c4afc namespace=moby
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.697020670-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:16:42 localhost containerd[1123]: time="2022-11-21T11:16:42.714311436-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:16:42-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=15157 runtime=io.containerd.runc.v2\n"
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered disabled state
+Nov 21 11:16:42 localhost kernel: veth62647af: renamed from eth0
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.7573] manager: (veth62647af): new Veth device (/org/freedesktop/NetworkManager/Devices/100)
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered disabled state
+Nov 21 11:16:42 localhost kernel: device vethb349824 left promiscuous mode
+Nov 21 11:16:42 localhost kernel: docker0: port 1(vethb349824) entered disabled state
+Nov 21 11:16:42 localhost audit: ANOM_PROMISCUOUS dev=vethb349824 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.7715] device (vethb349824): released from master device docker0
+Nov 21 11:16:42 localhost audit: ANOM_PROMISCUOUS dev=veth9a5264e prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.9828] manager: (veth7674af3): new Veth device (/org/freedesktop/NetworkManager/Devices/101)
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth9a5264e) entered blocking state
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth9a5264e) entered disabled state
+Nov 21 11:16:42 localhost kernel: device veth9a5264e entered promiscuous mode
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth9a5264e) entered blocking state
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth9a5264e) entered forwarding state
+Nov 21 11:16:42 localhost kernel: docker0: port 1(veth9a5264e) entered disabled state
+Nov 21 11:16:42 localhost NetworkManager[1112]: <info>  [1669058202.9841] manager: (veth9a5264e): new Veth device (/org/freedesktop/NetworkManager/Devices/102)
+Nov 21 11:16:43 localhost containerd[1123]: time="2022-11-21T11:16:43.016766434-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:16:43 localhost containerd[1123]: time="2022-11-21T11:16:43.016846267-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:16:43 localhost containerd[1123]: time="2022-11-21T11:16:43.016886436-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:16:43 localhost containerd[1123]: time="2022-11-21T11:16:43.017133083-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/69999182b3f5cd3edd0077cbf2b0070201e20fb835c5efae75e2c174880a067e pid=15203 runtime=io.containerd.runc.v2
+Nov 21 11:16:43 localhost kernel: eth0: renamed from veth7674af3
+Nov 21 11:16:43 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth9a5264e: link becomes ready
+Nov 21 11:16:43 localhost kernel: docker0: port 1(veth9a5264e) entered blocking state
+Nov 21 11:16:43 localhost kernel: docker0: port 1(veth9a5264e) entered forwarding state
+Nov 21 11:16:43 localhost NetworkManager[1112]: <info>  [1669058203.1816] device (veth9a5264e): carrier: link connected
+Nov 21 11:16:43 localhost NetworkManager[1112]: <info>  [1669058203.1824] device (docker0): carrier: link connected
+Nov 21 11:16:43 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:16:44 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth9a5264e.IPv6 with address fe80::203b:4ff:fe6d:e4e2.
+Nov 21 11:16:44 localhost avahi-daemon[943]: New relevant interface veth9a5264e.IPv6 for mDNS.
+Nov 21 11:16:44 localhost avahi-daemon[943]: Registering new address record for fe80::203b:4ff:fe6d:e4e2 on veth9a5264e.*.
+Nov 21 11:16:45 localhost dockerd[1212]: time="2022-11-21T11:16:45.210292214-08:00" level=info msg="ignoring event" container=69999182b3f5cd3edd0077cbf2b0070201e20fb835c5efae75e2c174880a067e module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:16:45 localhost containerd[1123]: time="2022-11-21T11:16:45.210397461-08:00" level=info msg="shim disconnected" id=69999182b3f5cd3edd0077cbf2b0070201e20fb835c5efae75e2c174880a067e
+Nov 21 11:16:45 localhost containerd[1123]: time="2022-11-21T11:16:45.210555680-08:00" level=warning msg="cleaning up after shim disconnected" id=69999182b3f5cd3edd0077cbf2b0070201e20fb835c5efae75e2c174880a067e namespace=moby
+Nov 21 11:16:45 localhost containerd[1123]: time="2022-11-21T11:16:45.210610952-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:16:45 localhost containerd[1123]: time="2022-11-21T11:16:45.224471183-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:16:45-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=15283 runtime=io.containerd.runc.v2\n"
+Nov 21 11:16:45 localhost kernel: docker0: port 1(veth9a5264e) entered disabled state
+Nov 21 11:16:45 localhost kernel: veth7674af3: renamed from eth0
+Nov 21 11:16:45 localhost NetworkManager[1112]: <info>  [1669058205.2581] manager: (veth7674af3): new Veth device (/org/freedesktop/NetworkManager/Devices/103)
+Nov 21 11:16:45 localhost avahi-daemon[943]: Interface veth9a5264e.IPv6 no longer relevant for mDNS.
+Nov 21 11:16:45 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth9a5264e.IPv6 with address fe80::203b:4ff:fe6d:e4e2.
+Nov 21 11:16:45 localhost audit: ANOM_PROMISCUOUS dev=veth9a5264e prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:45 localhost kernel: docker0: port 1(veth9a5264e) entered disabled state
+Nov 21 11:16:45 localhost kernel: device veth9a5264e left promiscuous mode
+Nov 21 11:16:45 localhost kernel: docker0: port 1(veth9a5264e) entered disabled state
+Nov 21 11:16:45 localhost avahi-daemon[943]: Withdrawing address record for fe80::203b:4ff:fe6d:e4e2 on veth9a5264e.
+Nov 21 11:16:45 localhost NetworkManager[1112]: <info>  [1669058205.2760] device (veth9a5264e): released from master device docker0
+Nov 21 11:16:45 localhost systemd[1]: run-docker-netns-089953eaa06d.mount: Deactivated successfully.
+Nov 21 11:16:45 localhost systemd[1]: var-lib-docker-overlay2-7a108342bb3d4f19b5c257d438ea2bd9b1cd1ad3b24a2f7e75e8c5e264c27988-merged.mount: Deactivated successfully.
+Nov 21 11:16:45 localhost systemd[1]: var-lib-docker-overlay2-7a108342bb3d4f19b5c257d438ea2bd9b1cd1ad3b24a2f7e75e8c5e264c27988-merged.mount: Deactivated successfully.
+Nov 21 11:16:46 localhost dockerd[1212]: time="2022-11-21T11:16:46.142703743-08:00" level=info msg="Layer sha256:8a72f43366b0ba29ee88508ead8610a72af933629d5ad79cc0adc6dd7e73b6f9 cleaned up"
+Nov 21 11:16:46 localhost dockerd[1212]: time="2022-11-21T11:16:46.270088283-08:00" level=info msg="Layer sha256:8a72f43366b0ba29ee88508ead8610a72af933629d5ad79cc0adc6dd7e73b6f9 cleaned up"
+Nov 21 11:16:46 localhost systemd[1]: var-lib-docker-overlay2-334f0c482941898698b2f78473f75b674ab73098736de6a511d3e51a94ef02a3\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:16:51 localhost systemd[1]: var-lib-docker-overlay2-ab0c57363a0413ec662123afa1557c00d8723eeae5570aa471c81236dfa6f1f1\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:16:51 localhost NetworkManager[1112]: <info>  [1669058211.3258] manager: (veth47000fd): new Veth device (/org/freedesktop/NetworkManager/Devices/104)
+Nov 21 11:16:51 localhost NetworkManager[1112]: <info>  [1669058211.3270] manager: (veth81c9376): new Veth device (/org/freedesktop/NetworkManager/Devices/105)
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered blocking state
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered disabled state
+Nov 21 11:16:51 localhost kernel: device veth81c9376 entered promiscuous mode
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered blocking state
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered forwarding state
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered disabled state
+Nov 21 11:16:51 localhost audit: ANOM_PROMISCUOUS dev=veth81c9376 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:16:51 localhost systemd-udevd[15379]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:51 localhost systemd-udevd[15381]: Using default interface naming scheme 'v249'.
+Nov 21 11:16:51 localhost audit[15389]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=15389 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:51 localhost audit[15399]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=15399 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:51 localhost audit[15407]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=15407 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:16:51 localhost containerd[1123]: time="2022-11-21T11:16:51.394783709-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:16:51 localhost containerd[1123]: time="2022-11-21T11:16:51.394919850-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:16:51 localhost containerd[1123]: time="2022-11-21T11:16:51.394947687-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:16:51 localhost containerd[1123]: time="2022-11-21T11:16:51.395314816-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/54fad606b17fc0932f4927f19c79f4466bdacdcea23e66c759bf529519396055 pid=15431 runtime=io.containerd.runc.v2
+Nov 21 11:16:51 localhost kernel: eth0: renamed from veth47000fd
+Nov 21 11:16:51 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth81c9376: link becomes ready
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered blocking state
+Nov 21 11:16:51 localhost kernel: docker0: port 1(veth81c9376) entered forwarding state
+Nov 21 11:16:51 localhost NetworkManager[1112]: <info>  [1669058211.5507] device (veth81c9376): carrier: link connected
+Nov 21 11:16:51 localhost NetworkManager[1112]: <info>  [1669058211.5510] device (docker0): carrier: link connected
+Nov 21 11:16:51 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:16:53 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth81c9376.IPv6 with address fe80::fcee:68ff:fe7c:eab0.
+Nov 21 11:16:53 localhost avahi-daemon[943]: New relevant interface veth81c9376.IPv6 for mDNS.
+Nov 21 11:16:53 localhost avahi-daemon[943]: Registering new address record for fe80::fcee:68ff:fe7c:eab0 on veth81c9376.*.
+Nov 21 11:18:22 localhost dockerd[1212]: time="2022-11-21T11:18:22.879286247-08:00" level=info msg="ignoring event" container=54fad606b17fc0932f4927f19c79f4466bdacdcea23e66c759bf529519396055 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:18:22 localhost containerd[1123]: time="2022-11-21T11:18:22.879586080-08:00" level=info msg="shim disconnected" id=54fad606b17fc0932f4927f19c79f4466bdacdcea23e66c759bf529519396055
+Nov 21 11:18:22 localhost containerd[1123]: time="2022-11-21T11:18:22.879640014-08:00" level=warning msg="cleaning up after shim disconnected" id=54fad606b17fc0932f4927f19c79f4466bdacdcea23e66c759bf529519396055 namespace=moby
+Nov 21 11:18:22 localhost containerd[1123]: time="2022-11-21T11:18:22.879658344-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:18:22 localhost containerd[1123]: time="2022-11-21T11:18:22.891562050-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:18:22-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=15662 runtime=io.containerd.runc.v2\n"
+Nov 21 11:18:22 localhost audit[15675]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=15675 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:22 localhost audit[15677]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=15677 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:22 localhost audit[15679]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=15679 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:22 localhost kernel: veth47000fd: renamed from eth0
+Nov 21 11:18:22 localhost kernel: docker0: port 1(veth81c9376) entered disabled state
+Nov 21 11:18:22 localhost NetworkManager[1112]: <info>  [1669058302.9575] manager: (veth47000fd): new Veth device (/org/freedesktop/NetworkManager/Devices/106)
+Nov 21 11:18:22 localhost avahi-daemon[943]: Interface veth81c9376.IPv6 no longer relevant for mDNS.
+Nov 21 11:18:22 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth81c9376.IPv6 with address fe80::fcee:68ff:fe7c:eab0.
+Nov 21 11:18:22 localhost kernel: docker0: port 1(veth81c9376) entered disabled state
+Nov 21 11:18:22 localhost audit: ANOM_PROMISCUOUS dev=veth81c9376 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:22 localhost kernel: device veth81c9376 left promiscuous mode
+Nov 21 11:18:22 localhost kernel: docker0: port 1(veth81c9376) entered disabled state
+Nov 21 11:18:22 localhost avahi-daemon[943]: Withdrawing address record for fe80::fcee:68ff:fe7c:eab0 on veth81c9376.
+Nov 21 11:18:22 localhost NetworkManager[1112]: <info>  [1669058302.9729] device (veth81c9376): released from master device docker0
+Nov 21 11:18:22 localhost systemd[1]: run-docker-netns-61ddf4447c51.mount: Deactivated successfully.
+Nov 21 11:18:22 localhost systemd[1]: var-lib-docker-overlay2-ab0c57363a0413ec662123afa1557c00d8723eeae5570aa471c81236dfa6f1f1-merged.mount: Deactivated successfully.
+Nov 21 11:18:25 localhost systemd[1]: var-lib-docker-overlay2-c0ef19cf7e42e390e7345c5d1bf4915ccad7b80d44874d2e8d96b9abc6bcfb3a\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:18:25 localhost dockerd[1212]: time="2022-11-21T11:18:25.407313959-08:00" level=info msg="Layer sha256:80af9ba0355968826ead88794e557b113e8c63a50ccd79bc844682717932b5a5 cleaned up"
+Nov 21 11:18:25 localhost dockerd[1212]: time="2022-11-21T11:18:25.513790587-08:00" level=info msg="Layer sha256:80af9ba0355968826ead88794e557b113e8c63a50ccd79bc844682717932b5a5 cleaned up"
+Nov 21 11:18:26 localhost audit: ANOM_PROMISCUOUS dev=veth710373f prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered blocking state
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered disabled state
+Nov 21 11:18:26 localhost kernel: device veth710373f entered promiscuous mode
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.2712] manager: (vethbcbbda9): new Veth device (/org/freedesktop/NetworkManager/Devices/107)
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.2730] manager: (veth710373f): new Veth device (/org/freedesktop/NetworkManager/Devices/108)
+Nov 21 11:18:26 localhost systemd[1]: var-lib-docker-overlay2-c0ef19cf7e42e390e7345c5d1bf4915ccad7b80d44874d2e8d96b9abc6bcfb3a-merged.mount: Deactivated successfully.
+Nov 21 11:18:26 localhost systemd-udevd[15868]: Using default interface naming scheme 'v249'.
+Nov 21 11:18:26 localhost systemd-udevd[15869]: Using default interface naming scheme 'v249'.
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.327911713-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.328099267-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.328121196-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.328694022-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/3ed4519f11290caa5b8eae1986c6c87684b598d6fb91822b4990e44b057725b2 pid=15896 runtime=io.containerd.runc.v2
+Nov 21 11:18:26 localhost kernel: eth0: renamed from vethbcbbda9
+Nov 21 11:18:26 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth710373f: link becomes ready
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered blocking state
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered forwarding state
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.5030] device (veth710373f): carrier: link connected
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.5038] device (docker0): carrier: link connected
+Nov 21 11:18:26 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.619627110-08:00" level=info msg="shim disconnected" id=3ed4519f11290caa5b8eae1986c6c87684b598d6fb91822b4990e44b057725b2
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.619768248-08:00" level=warning msg="cleaning up after shim disconnected" id=3ed4519f11290caa5b8eae1986c6c87684b598d6fb91822b4990e44b057725b2 namespace=moby
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.619797170-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:18:26 localhost dockerd[1212]: time="2022-11-21T11:18:26.619727009-08:00" level=info msg="ignoring event" container=3ed4519f11290caa5b8eae1986c6c87684b598d6fb91822b4990e44b057725b2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.630029674-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:18:26-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=15960 runtime=io.containerd.runc.v2\n"
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered disabled state
+Nov 21 11:18:26 localhost kernel: vethbcbbda9: renamed from eth0
+Nov 21 11:18:26 localhost systemd-udevd[15874]: Using default interface naming scheme 'v249'.
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.6647] manager: (vethbcbbda9): new Veth device (/org/freedesktop/NetworkManager/Devices/109)
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered disabled state
+Nov 21 11:18:26 localhost audit: ANOM_PROMISCUOUS dev=veth710373f prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:26 localhost kernel: device veth710373f left promiscuous mode
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth710373f) entered disabled state
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.6836] device (veth710373f): released from master device docker0
+Nov 21 11:18:26 localhost systemd[1]: run-docker-netns-6938605e2f15.mount: Deactivated successfully.
+Nov 21 11:18:26 localhost audit: ANOM_PROMISCUOUS dev=veth0967baf prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth0967baf) entered blocking state
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth0967baf) entered disabled state
+Nov 21 11:18:26 localhost kernel: device veth0967baf entered promiscuous mode
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth0967baf) entered blocking state
+Nov 21 11:18:26 localhost kernel: docker0: port 1(veth0967baf) entered forwarding state
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.8881] manager: (veth6fc937c): new Veth device (/org/freedesktop/NetworkManager/Devices/110)
+Nov 21 11:18:26 localhost systemd-udevd[15903]: Using default interface naming scheme 'v249'.
+Nov 21 11:18:26 localhost NetworkManager[1112]: <info>  [1669058306.8910] manager: (veth0967baf): new Veth device (/org/freedesktop/NetworkManager/Devices/111)
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.928956136-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.929038431-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.929052738-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:18:26 localhost containerd[1123]: time="2022-11-21T11:18:26.929316693-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/d75c74045dccf5d5fc06c121fa697ecdb8581910c38a7a936a3ebed70a7d5aa4 pid=15997 runtime=io.containerd.runc.v2
+Nov 21 11:18:27 localhost kernel: eth0: renamed from veth6fc937c
+Nov 21 11:18:27 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth0967baf: link becomes ready
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.0773] device (veth0967baf): carrier: link connected
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.0776] device (docker0): carrier: link connected
+Nov 21 11:18:27 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:18:27 localhost dockerd[1212]: time="2022-11-21T11:18:27.170875625-08:00" level=info msg="ignoring event" container=d75c74045dccf5d5fc06c121fa697ecdb8581910c38a7a936a3ebed70a7d5aa4 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.170830884-08:00" level=info msg="shim disconnected" id=d75c74045dccf5d5fc06c121fa697ecdb8581910c38a7a936a3ebed70a7d5aa4
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.171214320-08:00" level=warning msg="cleaning up after shim disconnected" id=d75c74045dccf5d5fc06c121fa697ecdb8581910c38a7a936a3ebed70a7d5aa4 namespace=moby
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.171238394-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.181202977-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:18:27-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=16068 runtime=io.containerd.runc.v2\n"
+Nov 21 11:18:27 localhost kernel: docker0: port 1(veth0967baf) entered disabled state
+Nov 21 11:18:27 localhost kernel: veth6fc937c: renamed from eth0
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.2205] manager: (veth6fc937c): new Veth device (/org/freedesktop/NetworkManager/Devices/112)
+Nov 21 11:18:27 localhost kernel: docker0: port 1(veth0967baf) entered disabled state
+Nov 21 11:18:27 localhost audit: ANOM_PROMISCUOUS dev=veth0967baf prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:27 localhost kernel: device veth0967baf left promiscuous mode
+Nov 21 11:18:27 localhost kernel: docker0: port 1(veth0967baf) entered disabled state
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.2359] device (veth0967baf): released from master device docker0
+Nov 21 11:18:27 localhost systemd[1]: var-lib-docker-overlay2-6541791e878c0d269a304499adeccc21c6b0ece034c8cb916ade47d8e273d1d5-merged.mount: Deactivated successfully.
+Nov 21 11:18:27 localhost systemd[1]: var-lib-docker-overlay2-0ba27fcea8acf5217ef6a4f08c1899a8507e4ab975d6d6c5f1321bcfb442f329-merged.mount: Deactivated successfully.
+Nov 21 11:18:27 localhost systemd[1]: var-lib-docker-overlay2-1a93e76dd4723645b4ed567ae480397099697c6552afc550ceae6f3812f7252f\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.4152] manager: (veth9512bd6): new Veth device (/org/freedesktop/NetworkManager/Devices/113)
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered blocking state
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered disabled state
+Nov 21 11:18:27 localhost audit: ANOM_PROMISCUOUS dev=vethac31b2c prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:27 localhost kernel: device vethac31b2c entered promiscuous mode
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered blocking state
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered forwarding state
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered disabled state
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.4217] manager: (vethac31b2c): new Veth device (/org/freedesktop/NetworkManager/Devices/114)
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.464449224-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.464592509-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.464607185-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:18:27 localhost containerd[1123]: time="2022-11-21T11:18:27.464841479-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/3245f7f404c1533ff2fe53707959991a2070a6dc988861a261d0ce894c04c656 pid=16107 runtime=io.containerd.runc.v2
+Nov 21 11:18:27 localhost kernel: eth0: renamed from veth9512bd6
+Nov 21 11:18:27 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethac31b2c: link becomes ready
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered blocking state
+Nov 21 11:18:27 localhost kernel: docker0: port 1(vethac31b2c) entered forwarding state
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.6367] device (vethac31b2c): carrier: link connected
+Nov 21 11:18:27 localhost NetworkManager[1112]: <info>  [1669058307.6370] device (docker0): carrier: link connected
+Nov 21 11:18:27 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:18:29 localhost avahi-daemon[943]: Joining mDNS multicast group on interface vethac31b2c.IPv6 with address fe80::1086:f7ff:feb7:f765.
+Nov 21 11:18:29 localhost avahi-daemon[943]: New relevant interface vethac31b2c.IPv6 for mDNS.
+Nov 21 11:18:29 localhost avahi-daemon[943]: Registering new address record for fe80::1086:f7ff:feb7:f765 on vethac31b2c.*.
+Nov 21 11:18:30 localhost dockerd[1212]: time="2022-11-21T11:18:30.888805845-08:00" level=info msg="ignoring event" container=3245f7f404c1533ff2fe53707959991a2070a6dc988861a261d0ce894c04c656 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:18:30 localhost containerd[1123]: time="2022-11-21T11:18:30.889844246-08:00" level=info msg="shim disconnected" id=3245f7f404c1533ff2fe53707959991a2070a6dc988861a261d0ce894c04c656
+Nov 21 11:18:30 localhost containerd[1123]: time="2022-11-21T11:18:30.889910872-08:00" level=warning msg="cleaning up after shim disconnected" id=3245f7f404c1533ff2fe53707959991a2070a6dc988861a261d0ce894c04c656 namespace=moby
+Nov 21 11:18:30 localhost containerd[1123]: time="2022-11-21T11:18:30.889924403-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:18:30 localhost containerd[1123]: time="2022-11-21T11:18:30.899467805-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:18:30-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=16199 runtime=io.containerd.runc.v2\n"
+Nov 21 11:18:30 localhost kernel: docker0: port 1(vethac31b2c) entered disabled state
+Nov 21 11:18:30 localhost kernel: veth9512bd6: renamed from eth0
+Nov 21 11:18:30 localhost avahi-daemon[943]: Interface vethac31b2c.IPv6 no longer relevant for mDNS.
+Nov 21 11:18:30 localhost NetworkManager[1112]: <info>  [1669058310.9380] manager: (veth9512bd6): new Veth device (/org/freedesktop/NetworkManager/Devices/115)
+Nov 21 11:18:30 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethac31b2c.IPv6 with address fe80::1086:f7ff:feb7:f765.
+Nov 21 11:18:30 localhost kernel: docker0: port 1(vethac31b2c) entered disabled state
+Nov 21 11:18:30 localhost kernel: device vethac31b2c left promiscuous mode
+Nov 21 11:18:30 localhost kernel: docker0: port 1(vethac31b2c) entered disabled state
+Nov 21 11:18:30 localhost audit: ANOM_PROMISCUOUS dev=vethac31b2c prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:30 localhost avahi-daemon[943]: Withdrawing address record for fe80::1086:f7ff:feb7:f765 on vethac31b2c.
+Nov 21 11:18:30 localhost systemd-udevd[15874]: veth9512bd6: Could not set offload features, ignoring: No such device
+Nov 21 11:18:30 localhost NetworkManager[1112]: <info>  [1669058310.9505] device (vethac31b2c): released from master device docker0
+Nov 21 11:18:30 localhost systemd[1]: run-docker-netns-cd5a4c579cb3.mount: Deactivated successfully.
+Nov 21 11:18:30 localhost systemd[1]: var-lib-docker-overlay2-1a93e76dd4723645b4ed567ae480397099697c6552afc550ceae6f3812f7252f-merged.mount: Deactivated successfully.
+Nov 21 11:18:31 localhost systemd[1]: var-lib-docker-overlay2-1a93e76dd4723645b4ed567ae480397099697c6552afc550ceae6f3812f7252f-merged.mount: Deactivated successfully.
+Nov 21 11:18:31 localhost dockerd[1212]: time="2022-11-21T11:18:31.908798141-08:00" level=info msg="Layer sha256:0a2194c38522190d87133f72da512048a9ce9a4f96f804cfb57e36a4656dff90 cleaned up"
+Nov 21 11:18:31 localhost systemd[1]: var-lib-docker-overlay2-94101fa5c134d9915fd919a31646ee8d478799082103f35297c3d7bf937b42e7\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:18:32 localhost dockerd[1212]: time="2022-11-21T11:18:32.030479925-08:00" level=info msg="Layer sha256:0a2194c38522190d87133f72da512048a9ce9a4f96f804cfb57e36a4656dff90 cleaned up"
+Nov 21 11:18:32 localhost systemd[1]: var-lib-docker-overlay2-d603824c9c629837e6154f0908dc55da72d7dcea0a92912f990c45d5b49202bb-merged.mount: Deactivated successfully.
+Nov 21 11:18:34 localhost systemd[1]: var-lib-docker-overlay2-ce33b76097d676ee3c1bd1591d5e34b4d55427b2dc2a4406390e309e123f3ec0\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 11:18:34 localhost audit: ANOM_PROMISCUOUS dev=vethf52e0da prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:18:34 localhost kernel: docker0: port 1(vethf52e0da) entered blocking state
+Nov 21 11:18:34 localhost kernel: docker0: port 1(vethf52e0da) entered disabled state
+Nov 21 11:18:34 localhost kernel: device vethf52e0da entered promiscuous mode
+Nov 21 11:18:34 localhost NetworkManager[1112]: <info>  [1669058314.1837] manager: (vethbf7cb6b): new Veth device (/org/freedesktop/NetworkManager/Devices/116)
+Nov 21 11:18:34 localhost NetworkManager[1112]: <info>  [1669058314.1849] manager: (vethf52e0da): new Veth device (/org/freedesktop/NetworkManager/Devices/117)
+Nov 21 11:18:34 localhost audit[16263]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=16263 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:34 localhost audit[16265]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=16265 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:34 localhost audit[16267]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=16267 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:18:34 localhost containerd[1123]: time="2022-11-21T11:18:34.240685700-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 11:18:34 localhost containerd[1123]: time="2022-11-21T11:18:34.240851287-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 11:18:34 localhost containerd[1123]: time="2022-11-21T11:18:34.240867678-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 11:18:34 localhost containerd[1123]: time="2022-11-21T11:18:34.241063145-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/2021a5ecb59b8577c7d318afde52c3ffdf484a4891859ceece4adf5e4ef2a9a6 pid=16291 runtime=io.containerd.runc.v2
+Nov 21 11:18:34 localhost kernel: eth0: renamed from vethbf7cb6b
+Nov 21 11:18:34 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethf52e0da: link becomes ready
+Nov 21 11:18:34 localhost kernel: docker0: port 1(vethf52e0da) entered blocking state
+Nov 21 11:18:34 localhost kernel: docker0: port 1(vethf52e0da) entered forwarding state
+Nov 21 11:18:34 localhost NetworkManager[1112]: <info>  [1669058314.4011] device (vethf52e0da): carrier: link connected
+Nov 21 11:18:34 localhost NetworkManager[1112]: <info>  [1669058314.4014] device (docker0): carrier: link connected
+Nov 21 11:18:34 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 11:18:36 localhost avahi-daemon[943]: Joining mDNS multicast group on interface vethf52e0da.IPv6 with address fe80::40ef:56ff:fe7d:109e.
+Nov 21 11:18:36 localhost avahi-daemon[943]: New relevant interface vethf52e0da.IPv6 for mDNS.
+Nov 21 11:18:36 localhost avahi-daemon[943]: Registering new address record for fe80::40ef:56ff:fe7d:109e on vethf52e0da.*.
+Nov 21 11:19:20 localhost containerd[1123]: time="2022-11-21T11:19:20.707980455-08:00" level=info msg="shim disconnected" id=2021a5ecb59b8577c7d318afde52c3ffdf484a4891859ceece4adf5e4ef2a9a6
+Nov 21 11:19:20 localhost containerd[1123]: time="2022-11-21T11:19:20.708395470-08:00" level=warning msg="cleaning up after shim disconnected" id=2021a5ecb59b8577c7d318afde52c3ffdf484a4891859ceece4adf5e4ef2a9a6 namespace=moby
+Nov 21 11:19:20 localhost containerd[1123]: time="2022-11-21T11:19:20.708413869-08:00" level=info msg="cleaning up dead shim"
+Nov 21 11:19:20 localhost dockerd[1212]: time="2022-11-21T11:19:20.708061377-08:00" level=info msg="ignoring event" container=2021a5ecb59b8577c7d318afde52c3ffdf484a4891859ceece4adf5e4ef2a9a6 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 11:19:20 localhost containerd[1123]: time="2022-11-21T11:19:20.720094231-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T11:19:20-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=16466 runtime=io.containerd.runc.v2\n"
+Nov 21 11:19:20 localhost audit[16479]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=16479 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:19:20 localhost audit[16481]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=16481 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:19:20 localhost audit[16483]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=16483 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 11:19:20 localhost kernel: docker0: port 1(vethf52e0da) entered disabled state
+Nov 21 11:19:20 localhost kernel: vethbf7cb6b: renamed from eth0
+Nov 21 11:19:20 localhost NetworkManager[1112]: <info>  [1669058360.8010] manager: (vethbf7cb6b): new Veth device (/org/freedesktop/NetworkManager/Devices/118)
+Nov 21 11:19:20 localhost kernel: docker0: port 1(vethf52e0da) entered disabled state
+Nov 21 11:19:20 localhost avahi-daemon[943]: Interface vethf52e0da.IPv6 no longer relevant for mDNS.
+Nov 21 11:19:20 localhost audit: ANOM_PROMISCUOUS dev=vethf52e0da prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 11:19:20 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface vethf52e0da.IPv6 with address fe80::40ef:56ff:fe7d:109e.
+Nov 21 11:19:20 localhost kernel: device vethf52e0da left promiscuous mode
+Nov 21 11:19:20 localhost kernel: docker0: port 1(vethf52e0da) entered disabled state
+Nov 21 11:19:20 localhost avahi-daemon[943]: Withdrawing address record for fe80::40ef:56ff:fe7d:109e on vethf52e0da.
+Nov 21 11:19:20 localhost NetworkManager[1112]: <info>  [1669058360.8153] device (vethf52e0da): released from master device docker0
+Nov 21 11:19:20 localhost systemd[1]: run-docker-netns-7958debc6f13.mount: Deactivated successfully.
+Nov 21 11:19:20 localhost systemd[1]: var-lib-docker-overlay2-ce33b76097d676ee3c1bd1591d5e34b4d55427b2dc2a4406390e309e123f3ec0-merged.mount: Deactivated successfully.
+Nov 21 11:33:20 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 11:33:20 localhost cupsd[1117]: REQUEST localhost - - "POST / HTTP/1.1" 200 188 Renew-Subscription successful-ok
+Nov 21 11:33:21 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 11:33:26 localhost kernel: perf: interrupt took too long (2514 > 2500), lowering kernel.perf_event_max_sample_rate to 79000
+Nov 21 11:33:51 localhost cupsd[1117]: Saving subscriptions.conf...
+Nov 21 11:33:51 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 11:38:48 localhost systemd[1]: Starting Package management dnf daemon...
+Nov 21 11:38:48 localhost systemd[1]: Started Package management dnf daemon.
+Nov 21 11:38:48 localhost audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnfdaemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 11:39:13 localhost systemd[1]: dnfdaemon.service: Deactivated successfully.
+Nov 21 11:39:13 localhost audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnfdaemon comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 11:49:23 localhost systemd[1575]: Started dbus-:1.2-org.cinnamon.ScreenSaver@1.service.
+Nov 21 11:49:23 localhost cinnamon-screensaver[19510]: CsNotificationWatcher: Could not add match rule to bus - GDBus.Error:org.freedesktop.DBus.Error.MatchRuleInvalid: Invalid match rule
+Nov 21 11:49:23 localhost cinnamon-session[1592]: WARNING: t+11464.76790s: Detected that screensaver has appeared on the bus
+Nov 21 12:01:34 localhost systemd[1]: Starting Fingerprint Authentication Daemon...
+Nov 21 12:01:35 localhost systemd[1]: Started Fingerprint Authentication Daemon.
+Nov 21 12:01:35 localhost audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:01:49 localhost audit[19871]: USER_AUTH pid=19871 uid=1000 auid=1000 ses=3 subj=unconfined_u:unconfined_r:chkpwd_t:s0-s0:c0.c1023 msg='op=PAM:unix_chkpwd acct="ljuraszek" exe="/usr/sbin/unix_chkpwd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:02:04 localhost systemd[1]: fprintd.service: Deactivated successfully.
+Nov 21 12:02:04 localhost audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:02:19 localhost cinnamon-screensaver[19510]: Trying to connect to logind...
+Nov 21 12:02:19 localhost cinnamon-screensaver[19510]: Starting screensaver...
+Nov 21 12:02:19 localhost cinnamon-screensaver[19510]: Cinnamon Screensaver support not found in current theme - adding some...
+Nov 21 12:02:19 localhost cinnamon-screensaver[19510]: Successfully using logind
+Nov 21 12:02:19 localhost cinnamon-session[1592]: WARNING: t+12240.76828s: Detected that screensaver has left the bus
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Error in sys.excepthook:
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Original exception was:
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Error in sys.excepthook:
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Original exception was:
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Error in sys.excepthook:
+Nov 21 12:02:20 localhost cinnamon-screensaver[19510]: Original exception was:
+Nov 21 12:23:28 localhost systemd[1]: Starting dnf makecache...
+Nov 21 12:23:29 localhost dnf[20754]: Docker CE Stable - x86_64                        27 kB/s | 3.5 kB     00:00
+Nov 21 12:23:29 localhost dnf[20754]: Fedora 35 - x86_64                               45 kB/s |  22 kB     00:00
+Nov 21 12:23:30 localhost dnf[20754]: Fedora 35 openh264 (From Cisco) - x86_64        3.3 kB/s | 989  B     00:00
+Nov 21 12:23:30 localhost dnf[20754]: Fedora Modular 35 - x86_64                       57 kB/s |  22 kB     00:00
+Nov 21 12:23:31 localhost dnf[20754]: Fedora 35 - x86_64 - Updates                     53 kB/s |  21 kB     00:00
+Nov 21 12:23:32 localhost dnf[20754]: Fedora Modular 35 - x86_64 - Updates             55 kB/s |  21 kB     00:00
+Nov 21 12:23:32 localhost dnf[20754]: google-chrome                                    12 kB/s | 1.3 kB     00:00
+Nov 21 12:23:32 localhost dnf[20754]: libnvidia-container                             3.1 kB/s | 833  B     00:00
+Nov 21 12:23:32 localhost dnf[20754]: nvidia-container-runtime                        3.6 kB/s | 833  B     00:00
+Nov 21 12:23:32 localhost dnf[20754]: nvidia-docker                                   4.0 kB/s | 833  B     00:00
+Nov 21 12:23:33 localhost dnf[20754]: RPM Fusion for Fedora 35 - Free                 4.4 kB/s | 3.4 kB     00:00
+Nov 21 12:23:34 localhost dnf[20754]: RPM Fusion for Fedora 35 - Free - Updates        11 kB/s | 3.2 kB     00:00
+Nov 21 12:23:34 localhost dnf[20754]: RPM Fusion for Fedora 35 - Nonfree               14 kB/s | 4.0 kB     00:00
+Nov 21 12:23:34 localhost dnf[20754]: RPM Fusion for Fedora 35 - Nonfree - Updates     13 kB/s | 3.7 kB     00:00
+Nov 21 12:23:35 localhost dnf[20754]: slack                                           4.4 kB/s | 1.8 kB     00:00
+Nov 21 12:23:35 localhost dnf[20754]: Visual Studio Code                              9.7 kB/s | 3.0 kB     00:00
+Nov 21 12:23:35 localhost dnf[20754]: Metadata cache created.
+Nov 21 12:23:35 localhost systemd[1]: dnf-makecache.service: Deactivated successfully.
+Nov 21 12:23:35 localhost systemd[1]: Finished dnf makecache.
+Nov 21 12:23:35 localhost audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:23:35 localhost audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=dnf-makecache comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:31:40 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 12:31:40 localhost cupsd[1117]: REQUEST localhost - - "POST / HTTP/1.1" 200 188 Renew-Subscription successful-ok
+Nov 21 12:31:41 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 12:32:11 localhost cupsd[1117]: Saving subscriptions.conf...
+Nov 21 12:32:11 localhost cupsd[1117]: Expiring subscriptions...
+Nov 21 12:33:49 localhost systemd[1]: var-lib-docker-overlay2-f948a75414b7bdb341fd2117b2f6e30d007b37b88d8a3e3ca6c3f3d3529a2898\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 12:33:49 localhost dockerd[1212]: time="2022-11-21T12:33:49.787717589-08:00" level=info msg="Layer sha256:80af9ba0355968826ead88794e557b113e8c63a50ccd79bc844682717932b5a5 cleaned up"
+Nov 21 12:33:49 localhost dockerd[1212]: time="2022-11-21T12:33:49.910840828-08:00" level=info msg="Layer sha256:80af9ba0355968826ead88794e557b113e8c63a50ccd79bc844682717932b5a5 cleaned up"
+Nov 21 12:33:50 localhost dockerd[1212]: time="2022-11-21T12:33:50.029289373-08:00" level=info msg="Layer sha256:80af9ba0355968826ead88794e557b113e8c63a50ccd79bc844682717932b5a5 cleaned up"
+Nov 21 12:33:50 localhost systemd[1]: var-lib-docker-overlay2-f948a75414b7bdb341fd2117b2f6e30d007b37b88d8a3e3ca6c3f3d3529a2898-merged.mount: Deactivated successfully.
+Nov 21 12:33:50 localhost systemd[1]: var-lib-docker-overlay2-21c6afafcbddeded7aa3bbf9eb04206be78e9f6001bbc0327766044e8abc2bfd-merged.mount: Deactivated successfully.
+Nov 21 12:33:50 localhost systemd[1]: var-lib-docker-overlay2-8a8b219d5cef0cb48ac34d7f10fe61b709f771adbe890d99057421d5f39c938d\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 12:33:50 localhost audit: ANOM_PROMISCUOUS dev=vethf8f15a4 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered blocking state
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered disabled state
+Nov 21 12:33:50 localhost kernel: device vethf8f15a4 entered promiscuous mode
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered blocking state
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered forwarding state
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered disabled state
+Nov 21 12:33:50 localhost NetworkManager[1112]: <info>  [1669062830.7981] manager: (veth37afb9e): new Veth device (/org/freedesktop/NetworkManager/Devices/119)
+Nov 21 12:33:50 localhost systemd-udevd[21852]: Using default interface naming scheme 'v249'.
+Nov 21 12:33:50 localhost NetworkManager[1112]: <info>  [1669062830.8002] manager: (vethf8f15a4): new Veth device (/org/freedesktop/NetworkManager/Devices/120)
+Nov 21 12:33:50 localhost systemd-udevd[21853]: Using default interface naming scheme 'v249'.
+Nov 21 12:33:50 localhost containerd[1123]: time="2022-11-21T12:33:50.838299227-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 12:33:50 localhost containerd[1123]: time="2022-11-21T12:33:50.838671450-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 12:33:50 localhost containerd[1123]: time="2022-11-21T12:33:50.838693367-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 12:33:50 localhost containerd[1123]: time="2022-11-21T12:33:50.839072338-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/cecb6f7b1e4f139783ac8f31ac769bdda324fb6edf7d9e54aee565c39667bd2a pid=21883 runtime=io.containerd.runc.v2
+Nov 21 12:33:50 localhost kernel: eth0: renamed from veth37afb9e
+Nov 21 12:33:50 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): vethf8f15a4: link becomes ready
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered blocking state
+Nov 21 12:33:50 localhost kernel: docker0: port 1(vethf8f15a4) entered forwarding state
+Nov 21 12:33:50 localhost NetworkManager[1112]: <info>  [1669062830.9961] device (vethf8f15a4): carrier: link connected
+Nov 21 12:33:50 localhost NetworkManager[1112]: <info>  [1669062830.9972] device (docker0): carrier: link connected
+Nov 21 12:33:51 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.118620318-08:00" level=info msg="shim disconnected" id=cecb6f7b1e4f139783ac8f31ac769bdda324fb6edf7d9e54aee565c39667bd2a
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.118805070-08:00" level=warning msg="cleaning up after shim disconnected" id=cecb6f7b1e4f139783ac8f31ac769bdda324fb6edf7d9e54aee565c39667bd2a namespace=moby
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.118867066-08:00" level=info msg="cleaning up dead shim"
+Nov 21 12:33:51 localhost dockerd[1212]: time="2022-11-21T12:33:51.118723906-08:00" level=info msg="ignoring event" container=cecb6f7b1e4f139783ac8f31ac769bdda324fb6edf7d9e54aee565c39667bd2a module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.130035300-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T12:33:51-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=21944 runtime=io.containerd.runc.v2\n"
+Nov 21 12:33:51 localhost kernel: docker0: port 1(vethf8f15a4) entered disabled state
+Nov 21 12:33:51 localhost kernel: veth37afb9e: renamed from eth0
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.1690] manager: (veth37afb9e): new Veth device (/org/freedesktop/NetworkManager/Devices/121)
+Nov 21 12:33:51 localhost systemd-udevd[21878]: Using default interface naming scheme 'v249'.
+Nov 21 12:33:51 localhost kernel: docker0: port 1(vethf8f15a4) entered disabled state
+Nov 21 12:33:51 localhost kernel: device vethf8f15a4 left promiscuous mode
+Nov 21 12:33:51 localhost kernel: docker0: port 1(vethf8f15a4) entered disabled state
+Nov 21 12:33:51 localhost audit: ANOM_PROMISCUOUS dev=vethf8f15a4 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.1846] device (vethf8f15a4): released from master device docker0
+Nov 21 12:33:51 localhost systemd-udevd[21857]: Using default interface naming scheme 'v249'.
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered blocking state
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered disabled state
+Nov 21 12:33:51 localhost kernel: device veth9453f3b entered promiscuous mode
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered blocking state
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered forwarding state
+Nov 21 12:33:51 localhost audit: ANOM_PROMISCUOUS dev=veth9453f3b prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.3527] manager: (veth05d63c0): new Veth device (/org/freedesktop/NetworkManager/Devices/122)
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.3550] manager: (veth9453f3b): new Veth device (/org/freedesktop/NetworkManager/Devices/123)
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.392756539-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.392904552-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.392920165-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.393167790-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/55b5beb0e4c0ebbd7770c299e7378fc78c3330e766cf2d94841bf7d21928cae2 pid=21997 runtime=io.containerd.runc.v2
+Nov 21 12:33:51 localhost kernel: eth0: renamed from veth05d63c0
+Nov 21 12:33:51 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth9453f3b: link becomes ready
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.5460] device (veth9453f3b): carrier: link connected
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.5464] device (docker0): carrier: link connected
+Nov 21 12:33:51 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.683655095-08:00" level=info msg="shim disconnected" id=55b5beb0e4c0ebbd7770c299e7378fc78c3330e766cf2d94841bf7d21928cae2
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.683718755-08:00" level=warning msg="cleaning up after shim disconnected" id=55b5beb0e4c0ebbd7770c299e7378fc78c3330e766cf2d94841bf7d21928cae2 namespace=moby
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.683739093-08:00" level=info msg="cleaning up dead shim"
+Nov 21 12:33:51 localhost dockerd[1212]: time="2022-11-21T12:33:51.683763759-08:00" level=info msg="ignoring event" container=55b5beb0e4c0ebbd7770c299e7378fc78c3330e766cf2d94841bf7d21928cae2 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.694050618-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T12:33:51-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=22067 runtime=io.containerd.runc.v2\n"
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered disabled state
+Nov 21 12:33:51 localhost kernel: veth05d63c0: renamed from eth0
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.7186] manager: (veth05d63c0): new Veth device (/org/freedesktop/NetworkManager/Devices/124)
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered disabled state
+Nov 21 12:33:51 localhost audit: ANOM_PROMISCUOUS dev=veth9453f3b prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:51 localhost kernel: device veth9453f3b left promiscuous mode
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth9453f3b) entered disabled state
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.7315] device (veth9453f3b): released from master device docker0
+Nov 21 12:33:51 localhost systemd[1]: run-docker-netns-66f876c3034a.mount: Deactivated successfully.
+Nov 21 12:33:51 localhost systemd[1]: var-lib-docker-overlay2-89d173913807785490ab6764917257827685c3afc6dffd5ba3e8a2c655b392ec-merged.mount: Deactivated successfully.
+Nov 21 12:33:51 localhost systemd[1]: var-lib-docker-overlay2-89d173913807785490ab6764917257827685c3afc6dffd5ba3e8a2c655b392ec-merged.mount: Deactivated successfully.
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth8f011ce) entered blocking state
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth8f011ce) entered disabled state
+Nov 21 12:33:51 localhost kernel: device veth8f011ce entered promiscuous mode
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth8f011ce) entered blocking state
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth8f011ce) entered forwarding state
+Nov 21 12:33:51 localhost kernel: docker0: port 1(veth8f011ce) entered disabled state
+Nov 21 12:33:51 localhost audit: ANOM_PROMISCUOUS dev=veth8f011ce prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.9525] manager: (vethe0215ec): new Veth device (/org/freedesktop/NetworkManager/Devices/125)
+Nov 21 12:33:51 localhost NetworkManager[1112]: <info>  [1669062831.9554] manager: (veth8f011ce): new Veth device (/org/freedesktop/NetworkManager/Devices/126)
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.996813698-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.997268655-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.997288055-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 12:33:51 localhost containerd[1123]: time="2022-11-21T12:33:51.997847143-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/656104c999749f906c04d28ada4bcaa9e164d487e36fe5efcc33b33d5e61f372 pid=22107 runtime=io.containerd.runc.v2
+Nov 21 12:33:52 localhost kernel: eth0: renamed from vethe0215ec
+Nov 21 12:33:52 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth8f011ce: link becomes ready
+Nov 21 12:33:52 localhost kernel: docker0: port 1(veth8f011ce) entered blocking state
+Nov 21 12:33:52 localhost kernel: docker0: port 1(veth8f011ce) entered forwarding state
+Nov 21 12:33:52 localhost NetworkManager[1112]: <info>  [1669062832.1637] device (veth8f011ce): carrier: link connected
+Nov 21 12:33:52 localhost NetworkManager[1112]: <info>  [1669062832.1653] device (docker0): carrier: link connected
+Nov 21 12:33:52 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 12:33:53 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth8f011ce.IPv6 with address fe80::d0c1:88ff:fee5:faa6.
+Nov 21 12:33:53 localhost avahi-daemon[943]: New relevant interface veth8f011ce.IPv6 for mDNS.
+Nov 21 12:33:53 localhost avahi-daemon[943]: Registering new address record for fe80::d0c1:88ff:fee5:faa6 on veth8f011ce.*.
+Nov 21 12:33:54 localhost containerd[1123]: time="2022-11-21T12:33:54.318408891-08:00" level=info msg="shim disconnected" id=656104c999749f906c04d28ada4bcaa9e164d487e36fe5efcc33b33d5e61f372
+Nov 21 12:33:54 localhost containerd[1123]: time="2022-11-21T12:33:54.318623087-08:00" level=warning msg="cleaning up after shim disconnected" id=656104c999749f906c04d28ada4bcaa9e164d487e36fe5efcc33b33d5e61f372 namespace=moby
+Nov 21 12:33:54 localhost containerd[1123]: time="2022-11-21T12:33:54.318643096-08:00" level=info msg="cleaning up dead shim"
+Nov 21 12:33:54 localhost dockerd[1212]: time="2022-11-21T12:33:54.318528389-08:00" level=info msg="ignoring event" container=656104c999749f906c04d28ada4bcaa9e164d487e36fe5efcc33b33d5e61f372 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 12:33:54 localhost containerd[1123]: time="2022-11-21T12:33:54.330073746-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T12:33:54-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=22181 runtime=io.containerd.runc.v2\n"
+Nov 21 12:33:54 localhost kernel: docker0: port 1(veth8f011ce) entered disabled state
+Nov 21 12:33:54 localhost kernel: vethe0215ec: renamed from eth0
+Nov 21 12:33:54 localhost NetworkManager[1112]: <info>  [1669062834.3653] manager: (vethe0215ec): new Veth device (/org/freedesktop/NetworkManager/Devices/127)
+Nov 21 12:33:54 localhost avahi-daemon[943]: Interface veth8f011ce.IPv6 no longer relevant for mDNS.
+Nov 21 12:33:54 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth8f011ce.IPv6 with address fe80::d0c1:88ff:fee5:faa6.
+Nov 21 12:33:54 localhost kernel: docker0: port 1(veth8f011ce) entered disabled state
+Nov 21 12:33:54 localhost audit: ANOM_PROMISCUOUS dev=veth8f011ce prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:33:54 localhost kernel: device veth8f011ce left promiscuous mode
+Nov 21 12:33:54 localhost kernel: docker0: port 1(veth8f011ce) entered disabled state
+Nov 21 12:33:54 localhost avahi-daemon[943]: Withdrawing address record for fe80::d0c1:88ff:fee5:faa6 on veth8f011ce.
+Nov 21 12:33:54 localhost NetworkManager[1112]: <info>  [1669062834.3809] device (veth8f011ce): released from master device docker0
+Nov 21 12:33:54 localhost systemd[1]: run-docker-netns-558ba6f190bd.mount: Deactivated successfully.
+Nov 21 12:33:54 localhost systemd[1]: var-lib-docker-overlay2-e22f1acf2d059535fe30f2e3dc85904a7d96633366de8714bbb3f3087859c05c-merged.mount: Deactivated successfully.
+Nov 21 12:33:54 localhost systemd[1]: var-lib-docker-overlay2-e22f1acf2d059535fe30f2e3dc85904a7d96633366de8714bbb3f3087859c05c-merged.mount: Deactivated successfully.
+Nov 21 12:33:55 localhost dockerd[1212]: time="2022-11-21T12:33:55.174513243-08:00" level=info msg="Layer sha256:c7087b07dc2529ad6517c04deeab4387939aa7bbaff9de2a52450947f47eb4db cleaned up"
+Nov 21 12:33:55 localhost dockerd[1212]: time="2022-11-21T12:33:55.313352118-08:00" level=info msg="Layer sha256:c7087b07dc2529ad6517c04deeab4387939aa7bbaff9de2a52450947f47eb4db cleaned up"
+Nov 21 12:34:05 localhost systemd[1]: var-lib-docker-overlay2-9c7a4a9c4362a6937d99c85febd53a00daead510208ea20a1a9d647d768f4eba\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 12:34:05 localhost NetworkManager[1112]: <info>  [1669062845.6370] manager: (vetha26e53d): new Veth device (/org/freedesktop/NetworkManager/Devices/128)
+Nov 21 12:34:05 localhost systemd-udevd[22303]: Using default interface naming scheme 'v249'.
+Nov 21 12:34:05 localhost kernel: docker0: port 1(veth2268e9a) entered blocking state
+Nov 21 12:34:05 localhost kernel: docker0: port 1(veth2268e9a) entered disabled state
+Nov 21 12:34:05 localhost kernel: device veth2268e9a entered promiscuous mode
+Nov 21 12:34:05 localhost audit: ANOM_PROMISCUOUS dev=veth2268e9a prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:34:05 localhost NetworkManager[1112]: <info>  [1669062845.6379] manager: (veth2268e9a): new Veth device (/org/freedesktop/NetworkManager/Devices/129)
+Nov 21 12:34:05 localhost systemd-udevd[22304]: Using default interface naming scheme 'v249'.
+Nov 21 12:34:05 localhost audit[22317]: NETFILTER_CFG table=nat family=2 entries=13 op=xt_replace pid=22317 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:05 localhost audit[22330]: NETFILTER_CFG table=filter family=2 entries=29 op=xt_replace pid=22330 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:05 localhost audit[22334]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=22334 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:05 localhost containerd[1123]: time="2022-11-21T12:34:05.718494607-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 12:34:05 localhost containerd[1123]: time="2022-11-21T12:34:05.718614302-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 12:34:05 localhost containerd[1123]: time="2022-11-21T12:34:05.718632979-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 12:34:05 localhost containerd[1123]: time="2022-11-21T12:34:05.718867133-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/0b5a354cc195c8cff75a5a55c8488fb2aa1b5511fef3ddf0336a2b2ad3b1fa64 pid=22354 runtime=io.containerd.runc.v2
+Nov 21 12:34:05 localhost kernel: eth0: renamed from vetha26e53d
+Nov 21 12:34:05 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth2268e9a: link becomes ready
+Nov 21 12:34:05 localhost kernel: docker0: port 1(veth2268e9a) entered blocking state
+Nov 21 12:34:05 localhost kernel: docker0: port 1(veth2268e9a) entered forwarding state
+Nov 21 12:34:05 localhost NetworkManager[1112]: <info>  [1669062845.8722] device (veth2268e9a): carrier: link connected
+Nov 21 12:34:05 localhost NetworkManager[1112]: <info>  [1669062845.8725] device (docker0): carrier: link connected
+Nov 21 12:34:05 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 12:34:07 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth2268e9a.IPv6 with address fe80::5cc2:3dff:fe2b:39c9.
+Nov 21 12:34:07 localhost avahi-daemon[943]: New relevant interface veth2268e9a.IPv6 for mDNS.
+Nov 21 12:34:07 localhost avahi-daemon[943]: Registering new address record for fe80::5cc2:3dff:fe2b:39c9 on veth2268e9a.*.
+Nov 21 12:34:11 localhost dockerd[1212]: time="2022-11-21T12:34:11.909004531-08:00" level=info msg="ignoring event" container=0b5a354cc195c8cff75a5a55c8488fb2aa1b5511fef3ddf0336a2b2ad3b1fa64 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 12:34:11 localhost containerd[1123]: time="2022-11-21T12:34:11.909482332-08:00" level=info msg="shim disconnected" id=0b5a354cc195c8cff75a5a55c8488fb2aa1b5511fef3ddf0336a2b2ad3b1fa64
+Nov 21 12:34:11 localhost containerd[1123]: time="2022-11-21T12:34:11.909545067-08:00" level=warning msg="cleaning up after shim disconnected" id=0b5a354cc195c8cff75a5a55c8488fb2aa1b5511fef3ddf0336a2b2ad3b1fa64 namespace=moby
+Nov 21 12:34:11 localhost containerd[1123]: time="2022-11-21T12:34:11.909562099-08:00" level=info msg="cleaning up dead shim"
+Nov 21 12:34:11 localhost containerd[1123]: time="2022-11-21T12:34:11.923089101-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T12:34:11-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=22475 runtime=io.containerd.runc.v2\n"
+Nov 21 12:34:11 localhost audit[22503]: NETFILTER_CFG table=nat family=2 entries=15 op=xt_replace pid=22503 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:11 localhost audit[22505]: NETFILTER_CFG table=filter family=2 entries=30 op=xt_replace pid=22505 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:11 localhost audit[22507]: NETFILTER_CFG table=nat family=2 entries=14 op=xt_replace pid=22507 subj=system_u:system_r:iptables_t:s0 comm="iptables"
+Nov 21 12:34:11 localhost kernel: vetha26e53d: renamed from eth0
+Nov 21 12:34:11 localhost kernel: docker0: port 1(veth2268e9a) entered disabled state
+Nov 21 12:34:11 localhost NetworkManager[1112]: <info>  [1669062851.9917] manager: (vetha26e53d): new Veth device (/org/freedesktop/NetworkManager/Devices/130)
+Nov 21 12:34:11 localhost avahi-daemon[943]: Interface veth2268e9a.IPv6 no longer relevant for mDNS.
+Nov 21 12:34:11 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth2268e9a.IPv6 with address fe80::5cc2:3dff:fe2b:39c9.
+Nov 21 12:34:11 localhost kernel: docker0: port 1(veth2268e9a) entered disabled state
+Nov 21 12:34:11 localhost audit: ANOM_PROMISCUOUS dev=veth2268e9a prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:34:11 localhost kernel: device veth2268e9a left promiscuous mode
+Nov 21 12:34:11 localhost kernel: docker0: port 1(veth2268e9a) entered disabled state
+Nov 21 12:34:12 localhost avahi-daemon[943]: Withdrawing address record for fe80::5cc2:3dff:fe2b:39c9 on veth2268e9a.
+Nov 21 12:34:12 localhost NetworkManager[1112]: <info>  [1669062852.0079] device (veth2268e9a): released from master device docker0
+Nov 21 12:34:12 localhost systemd[1]: run-docker-netns-1fbd89aef15f.mount: Deactivated successfully.
+Nov 21 12:34:12 localhost systemd[1]: var-lib-docker-overlay2-9c7a4a9c4362a6937d99c85febd53a00daead510208ea20a1a9d647d768f4eba-merged.mount: Deactivated successfully.
+Nov 21 12:36:16 localhost dockerd[1212]: time="2022-11-21T12:36:16.587271635-08:00" level=error msg="Not continuing with pull after error: errors:\ndenied: requested access to the resource is denied\nunauthorized: authentication required\n"
+Nov 21 12:36:16 localhost dockerd[1212]: time="2022-11-21T12:36:16.587740575-08:00" level=info msg="Ignoring extra error returned from registry: unauthorized: authentication required"
+Nov 21 12:36:19 localhost systemd[1]: var-lib-docker-overlay2-8735b2ddc20bcdd703e3f70e34454aace574c6e765e22aa4ed198eb6a21e4108\x2dinit-merged.mount: Deactivated successfully.
+Nov 21 12:36:19 localhost audit: ANOM_PROMISCUOUS dev=veth6b7da72 prom=256 old_prom=0 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered blocking state
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered disabled state
+Nov 21 12:36:19 localhost kernel: device veth6b7da72 entered promiscuous mode
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered blocking state
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered forwarding state
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered disabled state
+Nov 21 12:36:19 localhost NetworkManager[1112]: <info>  [1669062979.6177] manager: (vethac0cf15): new Veth device (/org/freedesktop/NetworkManager/Devices/131)
+Nov 21 12:36:19 localhost systemd-udevd[22998]: Using default interface naming scheme 'v249'.
+Nov 21 12:36:19 localhost NetworkManager[1112]: <info>  [1669062979.6187] manager: (veth6b7da72): new Veth device (/org/freedesktop/NetworkManager/Devices/132)
+Nov 21 12:36:19 localhost systemd-udevd[23000]: Using default interface naming scheme 'v249'.
+Nov 21 12:36:19 localhost containerd[1123]: time="2022-11-21T12:36:19.648864945-08:00" level=info msg="loading plugin \"io.containerd.event.v1.publisher\"..." runtime=io.containerd.runc.v2 type=io.containerd.event.v1
+Nov 21 12:36:19 localhost containerd[1123]: time="2022-11-21T12:36:19.649446480-08:00" level=info msg="loading plugin \"io.containerd.internal.v1.shutdown\"..." runtime=io.containerd.runc.v2 type=io.containerd.internal.v1
+Nov 21 12:36:19 localhost containerd[1123]: time="2022-11-21T12:36:19.649506800-08:00" level=info msg="loading plugin \"io.containerd.ttrpc.v1.task\"..." runtime=io.containerd.runc.v2 type=io.containerd.ttrpc.v1
+Nov 21 12:36:19 localhost containerd[1123]: time="2022-11-21T12:36:19.650052330-08:00" level=info msg="starting signal loop" namespace=moby path=/run/containerd/io.containerd.runtime.v2.task/moby/b2f6c71703411840aaf40add1dea1198b22628bb844aa7301faafd9ebea9703e pid=23025 runtime=io.containerd.runc.v2
+Nov 21 12:36:19 localhost kernel: eth0: renamed from vethac0cf15
+Nov 21 12:36:19 localhost kernel: IPv6: ADDRCONF(NETDEV_CHANGE): veth6b7da72: link becomes ready
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered blocking state
+Nov 21 12:36:19 localhost kernel: docker0: port 1(veth6b7da72) entered forwarding state
+Nov 21 12:36:19 localhost NetworkManager[1112]: <info>  [1669062979.8191] device (veth6b7da72): carrier: link connected
+Nov 21 12:36:19 localhost NetworkManager[1112]: <info>  [1669062979.8200] device (docker0): carrier: link connected
+Nov 21 12:36:19 localhost systemd-resolved[916]: Failed to determine the local hostname and LLMNR/mDNS names, ignoring: No such device or address
+Nov 21 12:36:21 localhost avahi-daemon[943]: Joining mDNS multicast group on interface veth6b7da72.IPv6 with address fe80::f0f0:8fff:fe81:a637.
+Nov 21 12:36:21 localhost avahi-daemon[943]: New relevant interface veth6b7da72.IPv6 for mDNS.
+Nov 21 12:36:21 localhost avahi-daemon[943]: Registering new address record for fe80::f0f0:8fff:fe81:a637 on veth6b7da72.*.
+Nov 21 12:37:56 localhost NetworkManager[1112]: <info>  [1669063076.8412] dhcp4 (enp3s0): state changed extended -> extended, address=192.168.4.54
+Nov 21 12:37:56 localhost systemd[1]: Starting Network Manager Script Dispatcher Service...
+Nov 21 12:37:56 localhost systemd[1]: Started Network Manager Script Dispatcher Service.
+Nov 21 12:37:56 localhost audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:38:06 localhost systemd[1]: NetworkManager-dispatcher.service: Deactivated successfully.
+Nov 21 12:38:06 localhost audit[1]: SERVICE_STOP pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=NetworkManager-dispatcher comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:38:10 localhost containerd[1123]: time="2022-11-21T12:38:10.859601446-08:00" level=info msg="shim disconnected" id=b2f6c71703411840aaf40add1dea1198b22628bb844aa7301faafd9ebea9703e
+Nov 21 12:38:10 localhost containerd[1123]: time="2022-11-21T12:38:10.859951554-08:00" level=warning msg="cleaning up after shim disconnected" id=b2f6c71703411840aaf40add1dea1198b22628bb844aa7301faafd9ebea9703e namespace=moby
+Nov 21 12:38:10 localhost containerd[1123]: time="2022-11-21T12:38:10.859977093-08:00" level=info msg="cleaning up dead shim"
+Nov 21 12:38:10 localhost dockerd[1212]: time="2022-11-21T12:38:10.859754422-08:00" level=info msg="ignoring event" container=b2f6c71703411840aaf40add1dea1198b22628bb844aa7301faafd9ebea9703e module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+Nov 21 12:38:10 localhost containerd[1123]: time="2022-11-21T12:38:10.874255894-08:00" level=warning msg="cleanup warnings time=\"2022-11-21T12:38:10-08:00\" level=info msg=\"starting signal loop\" namespace=moby pid=23553 runtime=io.containerd.runc.v2\n"
+Nov 21 12:38:10 localhost kernel: docker0: port 1(veth6b7da72) entered disabled state
+Nov 21 12:38:10 localhost kernel: vethac0cf15: renamed from eth0
+Nov 21 12:38:10 localhost avahi-daemon[943]: Interface veth6b7da72.IPv6 no longer relevant for mDNS.
+Nov 21 12:38:10 localhost avahi-daemon[943]: Leaving mDNS multicast group on interface veth6b7da72.IPv6 with address fe80::f0f0:8fff:fe81:a637.
+Nov 21 12:38:10 localhost kernel: docker0: port 1(veth6b7da72) entered disabled state
+Nov 21 12:38:10 localhost kernel: device veth6b7da72 left promiscuous mode
+Nov 21 12:38:10 localhost kernel: docker0: port 1(veth6b7da72) entered disabled state
+Nov 21 12:38:10 localhost audit: ANOM_PROMISCUOUS dev=veth6b7da72 prom=0 old_prom=256 auid=4294967295 uid=0 gid=0 ses=4294967295
+Nov 21 12:38:10 localhost avahi-daemon[943]: Withdrawing address record for fe80::f0f0:8fff:fe81:a637 on veth6b7da72.
+Nov 21 12:38:10 localhost NetworkManager[1112]: <info>  [1669063090.9302] manager: (vethac0cf15): new Veth device (/org/freedesktop/NetworkManager/Devices/133)
+Nov 21 12:38:10 localhost NetworkManager[1112]: <info>  [1669063090.9335] device (veth6b7da72): released from master device docker0
+Nov 21 12:38:10 localhost systemd[1]: run-docker-netns-6752d7f03a7d.mount: Deactivated successfully.
+Nov 21 12:38:10 localhost systemd[1]: var-lib-docker-overlay2-8735b2ddc20bcdd703e3f70e34454aace574c6e765e22aa4ed198eb6a21e4108-merged.mount: Deactivated successfully.
+Nov 21 12:39:36 localhost systemd[1]: Starting Fingerprint Authentication Daemon...
+Nov 21 12:39:36 localhost systemd[1]: Started Fingerprint Authentication Daemon.
+Nov 21 12:39:36 localhost audit[1]: SERVICE_START pid=1 uid=0 auid=4294967295 ses=4294967295 subj=system_u:system_r:init_t:s0 msg='unit=fprintd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+Nov 21 12:39:38 localhost audit[23991]: USER_AUTH pid=23991 uid=1000 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:authentication grantors=pam_usertype,pam_localuser,pam_unix acct="ljuraszek" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+Nov 21 12:39:38 localhost audit[23991]: USER_ACCT pid=23991 uid=1000 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:accounting grantors=pam_unix,pam_localuser acct="ljuraszek" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+Nov 21 12:39:38 localhost audit[23991]: USER_CMD pid=23991 uid=1000 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='cwd="/home/ljuraszek/Progs/cribl" cmd=6370202F7661722F6C6F672F6D65737361676573202E exe="/usr/bin/sudo" terminal=pts/0 res=success'
+Nov 21 12:39:38 localhost audit[23991]: CRED_REFR pid=23991 uid=1000 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:setcred grantors=pam_localuser,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+Nov 21 12:39:38 localhost audit[23991]: USER_START pid=23991 uid=1000 auid=1000 ses=2 subj=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023 msg='op=PAM:session_open grantors=pam_keyinit,pam_limits,pam_keyinit,pam_limits,pam_systemd,pam_unix acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
