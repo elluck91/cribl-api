@@ -52,7 +52,8 @@ app.get('/lines', async (req, res) => {
 
     try {
         const requests = await Promise.all(promises);
-        res.send(requests);
+        let json = requests.map((request) => JSON.parse(request));
+        res.send(json);
     } catch (err) {
         res.status(500).send(err);
     }
@@ -69,7 +70,7 @@ function getSecondaryLogs(uid, filename, filter, limit) {
                 method: 'GET',
             }, (res) => {
                 res.on('data', (data) => {
-                    resolve(data.toString());
+                    resolve(data);
                 });
             }, (err) => {
                 reject(err);

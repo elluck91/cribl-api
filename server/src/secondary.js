@@ -64,7 +64,13 @@ app.get('/lines', async (req, res) => {
         try {
             const filePath = `${LOG_PATH}/${filename}`;
             const lines = await getLines(filePath, filter, limit);
-            res.send(lines);
+            res.send({
+                UID,
+                filename,
+                filter,
+                limit,
+                lines,
+            });
         } catch (err) {
             res.status(500).send(err);
         }
@@ -106,15 +112,6 @@ async function getLines(path, text, n) {
 
         let bytesRead = fs.readSync(fd, buffer, 0, bytesToRead, pos);
         let data = buffer.toString('utf8', 0, bytesRead);
-
-        // If we're not at the beginning of the file, we need to ignore the last line
-        // because it's probably not a complete line
-        if (pos > 0) {
-            data = data.substring(data.indexOf('\n') + 1);
-        } else {
-            data = data.substring(0, data.lastIndexOf('\n'));
-        }
-
         let linesInData = data.split('\n');
 
         // If we're not at the beginning of the file, we need to add the last line
@@ -142,5 +139,10 @@ async function getLines(path, text, n) {
         });
     });
 
+    lines.forEach((line, index) => {
+        lines[index] = line.replace(/\r/, '');
+        console.log(line);
+    });
+    
     return lines;
 }
