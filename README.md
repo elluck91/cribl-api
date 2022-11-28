@@ -46,25 +46,25 @@ docker run -p 3002:3002 --network="host" -d cribl-primary node src/primary.js
 ```
 
 ## Server (secondary #1)
-build primary server docker image: 
+build secondary server docker image: 
 ```
 cd server
 docker build --build-arg PRIMARY_PORT=3002 --build-arg SECONDARY_PORT=3003 -t cribl-secondary1 .
 ```
 
-run primary server docker container:
+run secondary server docker container:
 ```
 docker run -p 3003:3003 --network="host" -d cribl-secondary1 node src/secondary.js
 ```
 
 ## Server (secondary #2)
-build primary server docker image: 
+build secondary server docker image: 
 ```
 cd server
 docker build --build-arg PRIMARY_PORT=3002 --build-arg SECONDARY_PORT=3004 -t cribl-secondary2 .
 ```
 
-run primary server docker container:
+run secondary server docker container:
 ```
 docker run -p 3004:3004 --network="host" -d cribl-secondary2 node src/secondary.js
 ```
