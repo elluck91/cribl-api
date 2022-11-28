@@ -101,7 +101,15 @@ async function getLines(path, text, n) {
     const stats = await fileStats(path);
     const fileSize = stats.size;
     const buffer = Buffer.alloc(stats.blksize);
-    const fd = fs.openSync(path, 'r');
+    const fd = await new Promise((resolve, reject) => {
+        fs.open(path, 'r', (err, fd) => {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(fd);
+            }
+        });
+    });
 
     let lines = [];
     let pos = fileSize;
@@ -110,7 +118,16 @@ async function getLines(path, text, n) {
         let bytesToRead = Math.min(stats.blksize, pos);
         pos -= bytesToRead;
 
-        let bytesRead = fs.readSync(fd, buffer, 0, bytesToRead, pos);
+        let bytesRead = await new Promise((resolve, reject) => {
+            fs.read(fd, buffer, 0, bytesToRead, pos, (err, bytesRead) => {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(bytesRead);
+                }
+            });
+        });
+
         let data = buffer.toString('utf8', 0, bytesRead);
         let linesInData = data.split('\n');
 
